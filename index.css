@@ -1,0 +1,353 @@
+.hero-bg {
+  background-image: radial-gradient(
+      at 100% 0%,
+      rgba(220, 38, 38, 0.08) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 100%, rgba(243, 244, 246, 1) 0px, transparent 50%);
+}
+
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
+}
+
+#btn-message {
+  --text-color: rgb(255, 255, 255);
+  --bg-color-sup: #5e5e5e;
+  --bg-color: #2b2b2b;
+  --bg-hover-color: #161616;
+  --online-status: #00da00;
+  --font-size: 16px;
+  --btn-transition: all 0.2s ease-out;
+}
+
+.button-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 400 var(--font-size) Helvetica Neue, sans-serif;
+  box-shadow: 0 0 2.17382px rgba(0, 0, 0, 0.049),
+    0 1.75px 6.01034px rgba(0, 0, 0, 0.07),
+    0 3.63px 14.4706px rgba(0, 0, 0, 0.091), 0 22px 48px rgba(0, 0, 0, 0.14);
+  background-color: var(--bg-color);
+  border-radius: 68px;
+  cursor: pointer;
+  padding: 6px 10px 6px 6px;
+  width: fit-content;
+  height: 40px;
+  border: 0;
+  overflow: hidden;
+  position: relative;
+  transition: var(--btn-transition);
+}
+
+.button-message:hover {
+  height: 56px;
+  padding: 8px 20px 8px 8px;
+  background-color: var(--bg-hover-color);
+  transition: var(--btn-transition);
+}
+.whatsapp {
+  fill: #00ff00;
+}
+
+.button-message:active {
+  transform: scale(0.99);
+}
+
+.content-avatar {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  transition: var(--btn-transition);
+  position: relative;
+}
+
+.button-message:hover .content-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--bg-color-sup);
+}
+
+.user-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-user {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  right: 1px;
+  bottom: 1px;
+  border-radius: 50%;
+  outline: solid 2px var(--bg-color);
+  background-color: var(--online-status);
+  transition: var(--btn-transition);
+  animation: active-status 2s ease-in-out infinite;
+}
+
+.button-message:hover .status-user {
+  width: 10px;
+  height: 10px;
+  right: 1px;
+  bottom: 1px;
+  outline: solid 3px var(--bg-hover-color);
+}
+
+.notice-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 8px;
+  text-align: initial;
+  color: var(--text-color);
+}
+
+.username {
+  letter-spacing: -6px;
+  height: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: var(--btn-transition);
+}
+
+.user-id {
+  font-size: 12px;
+  letter-spacing: -6px;
+  height: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--btn-transition);
+}
+
+.lable-message {
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transform: scaleY(1);
+  transition: var(--btn-transition);
+}
+
+.button-message:hover .username {
+  height: auto;
+  letter-spacing: normal;
+  opacity: 1;
+  transform: translateY(0);
+  transition: var(--btn-transition);
+}
+
+.button-message:hover .user-id {
+  height: auto;
+  letter-spacing: normal;
+  opacity: 1;
+  transform: translateY(0);
+  transition: var(--btn-transition);
+}
+
+.button-message:hover .lable-message {
+  height: 0;
+  transform: scaleY(0);
+  transition: var(--btn-transition);
+}
+
+.lable-message,
+.username {
+  font-weight: 600;
+}
+
+.number-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 8px;
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--bg-color-sup);
+  border-radius: 20px;
+}
+
+/* --- Shiny CTA Button CSS (Red Variant) --- */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@property --gradient-angle-offset {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@property --gradient-percent {
+  syntax: "<percentage>";
+  initial-value: 20%;
+  inherits: false;
+}
+@property --gradient-shine {
+  syntax: "<color>";
+  initial-value: #f87171;
+  inherits: false;
+}
+
+.shiny-cta {
+  --gradient-angle: 0deg;
+  --gradient-angle-offset: 0deg;
+  --gradient-percent: 20%;
+  --gradient-shine: #f87171; /* Red-400 */
+  --shadow-size: 2px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem; /* Adjusted for navbar sizing */
+  font-size: 0.875rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #ffffff;
+  /* Background: Black center, Red rotating border */
+  background: linear-gradient(#000000, #000000) padding-box,
+    conic-gradient(
+        from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+        transparent 0%,
+        #dc2626 5%,
+        /* Red-600 */ var(--gradient-shine) 15%,
+        #dc2626 30%,
+        transparent 40%,
+        transparent 100%
+      )
+      border-box;
+  border: 2px solid transparent;
+  box-shadow: inset 0 0 0 1px #1a1818;
+  outline: none;
+  transition: --gradient-angle-offset 800ms cubic-bezier(0.25, 1, 0.5, 1),
+    --gradient-percent 800ms cubic-bezier(0.25, 1, 0.5, 1),
+    --gradient-shine 800ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
+  cursor: pointer;
+  isolation: isolate;
+  outline-offset: 4px;
+  font-family: "Inter", sans-serif;
+  z-index: 0;
+  animation: border-spin 2.5s linear infinite;
+}
+
+@keyframes border-spin {
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+
+.shiny-cta:active {
+  transform: translateY(1px);
+}
+
+.shiny-cta::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  --size: calc(100% - 6px);
+  --position: 2px;
+  --space: 4px;
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(
+      circle at var(--position) var(--position),
+      white 0.5px,
+      transparent 0
+    )
+    padding-box;
+  background-size: var(--space) var(--space);
+  background-repeat: space;
+  mask-image: conic-gradient(
+    from calc(var(--gradient-angle) + 45deg),
+    black,
+    transparent 10% 90%,
+    black
+  );
+  border-radius: inherit;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.shiny-cta::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(
+    -50deg,
+    transparent,
+    #dc2626,
+    transparent
+  ); /* Red shimmer */
+  mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+  opacity: 0.6;
+  animation: shimmer 4s linear infinite;
+  animation-play-state: running;
+}
+
+.shiny-cta span {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shiny-cta span::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  --size: calc(100% + 1rem);
+  width: var(--size);
+  height: var(--size);
+  box-shadow: inset 0 -1ex 2rem 4px #dc2626; /* Red glow */
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity 800ms cubic-bezier(0.25, 1, 0.5, 1);
+  animation: breathe 4.5s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes breathe {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
