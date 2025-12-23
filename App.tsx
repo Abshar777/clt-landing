@@ -30,6 +30,7 @@ import FAQ from "./components/faq";
 import VideoTestimonials from "./components/videoTestimonials";
 import FinalCTA from "./components/cta";
 import ProfitResults from "./components/results";
+import { Toaster } from "sonner";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -91,6 +92,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen opacity-0 transition-opacity duration-1000">
+     <Toaster position="bottom-right" richColors />
       <StatsTicker />
       <Navbar />
       <main>

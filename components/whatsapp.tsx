@@ -1,8 +1,8 @@
 
 // import { phoneNumber } from "@/const/data";
+import { phoneNumber } from "@/const";
 import React from "react";
 
-const phoneNumber="1234567890"
 
 export const whatsappLink = `https://wa.me/${phoneNumber.replace("+", "").replace(" ", "")}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`;
 const WhatsappButton = () => {

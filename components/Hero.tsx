@@ -1,8 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ShieldCheck, Zap, TrendingUp, Target, Mail, Phone, ArrowRight } from "lucide-react";
+import {
+  ShieldCheck,
+  Zap,
+  TrendingUp,
+  Target,
+  Mail,
+  Phone,
+  ArrowRight,
+  Loader2,
+} from "lucide-react";
 import { TimeDisplay } from "./timer/TimeDisplay";
 import { minutesLeftUntilJan30_2026 } from "@/utils/util";
+import { toast } from "sonner";
+import { useState } from "react";
+import { phoneNumber } from "@/const";
 
 export const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -45,6 +57,75 @@ export const Hero: React.FC = () => {
 
     return () => ctx.revert();
   }, []);
+
+  const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [isValidPhone, setIsValidPhone] = useState(false);
+
+  const url =
+    "https://script.google.com/macros/s/AKfycbw-uyPiyPDttDCasddkRP4-tTD2vqTQivU6MLnUU80g-r6Tsx3P8sVWiX6Zzrgj1zp2/exec";
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let input = e.target.value.replace(/\D/g, "");
+    if (input.startsWith("91")) input = input.substring(2);
+    if (input.length > 10) input = input.substring(0, 10);
+
+    let formatted = "+91";
+    if (input.length > 0) formatted += "-" + input.substring(0, 5);
+    if (input.length > 5) formatted += "-" + input.substring(5);
+
+    setFormData({ ...formData, phone: formatted });
+    setIsValidPhone(input.length === 10);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      await fetch(url, {
+        method: "POST",
+        body: JSON.stringify({
+          Name: " ",
+          Email: formData?.email,
+          PhoneNumber: " " + formData?.phone + "_",
+          Message: " ",
+        }),
+      });
+
+      toast.success("Message sent successfully");
+      setFormData({
+        email: "",
+        phone: "",
+      });
+
+      window.open(
+        `https://wa.me/${phoneNumber.replace("+", "").replace(" ", "")}?text=${
+          formData.fname
+        } ${formData.lname} \n ${formData.email} \n${formData.phone} \n${
+          formData.message
+        }`
+      );
+    } catch (error) {
+      console.error(error);
+      toast.error("Message send failed");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <section
@@ -126,14 +207,17 @@ export const Hero: React.FC = () => {
             <h3 className="text-2xl font-black text-black">
               Start My Trading Journey
             </h3>
-            <div className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="relative">
                 <Mail
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
                   size={18}
                 />
                 <input
+                  onChange={handleChange}
+                  value={formData?.email}
                   type="email"
+                  name="email"
                   placeholder="Email Address"
                   className="w-full bg-black/5 border border-black/10 rounded-2xl py-4 pl-12 pr-6 text-black placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
                 />
@@ -144,19 +228,30 @@ export const Hero: React.FC = () => {
                   size={18}
                 />
                 <input
+                  onChange={phoneNumberChange}
+                  value={formData?.phone}
                   type="tel"
+                  name="phone"
                   placeholder="Phone Number"
                   className="w-full bg-black/5 border border-black/10 rounded-2xl py-4 pl-12 pr-6 text-black placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
                 />
               </div>
-              <button className="w-full bg-red-600 text-white py-5 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all flex items-center justify-center gap-3 shadow-xl">
-                Get My Free Roadmap
+              <button
+                type="submit"
+                disabled={isLoading || !isValidPhone}
+                className="w-full bg-red-600 text-white py-5 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all flex items-center justify-center gap-3 shadow-xl"
+              >
+                {isLoading ? (
+                  <div className="flex items-center justify-center gap-2">
+                    <Loader2 className="w-4 h-4 animate-spin text-white" />
+                    <span className="text-white">submitting...</span>
+                  </div>
+                ) : (
+                  "Get My Free Roadmap"
+                )}
                 <ArrowRight size={20} />
               </button>
-              
-            </div>
-
-          
+            </form>
           </div>
         </div>
       </div>

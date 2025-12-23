@@ -34,11 +34,11 @@ const ProfitResults: React.FC = () => {
             640: { slidesPerView: 2 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
-            1200: { slidesPerView: 4 },
+            1200: { slidesPerView: 4.5 },
           }}
           className="!pb-12"
         >
-          {teamMembers.map((member, index) => (
+          {PROFIT_SCREENSHOTS.map((member, index) => (
             <SwiperSlide key={index}>
               <div className="relative image-anime bg-transparent rounded-xl overflow-hidden group">
                 {/* Image Wrapper */}
@@ -47,9 +47,9 @@ const ProfitResults: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10"></div>
 
                   <img
-                    src={member.imageUrl}
-                    alt={member.name}
-                    className="w-full aspect-[1/1.35] object-cover rounded-2xl transform transition duration-500 group-hover:scale-110"
+                    src={member}
+                    alt="Profit Screenshot"
+                    className="w-full aspect-[1/2] object-cover rounded-2xl transform transition duration-500 group-hover:scale-110"
                   />
                 </div>
 

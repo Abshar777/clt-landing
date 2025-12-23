@@ -144,10 +144,22 @@ export const PROFIT_RESULTS = [
 
 // Phone-sized portrait screenshots
 export const PROFIT_SCREENSHOTS = [
-  "https://images.unsplash.com/photo-1611974714851-eb6055301353?q=80&w=800&auto=format&fit=crop&ar=9:16",
-  "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop&ar=9:16",
-  "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?q=80&w=800&auto=format&fit=crop&ar=9:16",
-  "https://images.unsplash.com/photo-1642388691919-617b01850f8b?q=80&w=800&auto=format&fit=crop&ar=9:16",
-  "https://images.unsplash.com/photo-1640341719917-0a442750e501?q=80&w=800&auto=format&fit=crop&ar=9:16",
-  "https://images.unsplash.com/photo-1642388591823-936660686950?q=80&w=800&auto=format&fit=crop&ar=9:16"
+  "/1.jpeg",
+  "/2.jpeg",
+  "/3.jpeg",
+  "/4.jpeg",
+  "/5.jpeg",
+  "/6.jpeg",
+  "/7.jpeg",
+  "/8.jpeg",
+  "/9.jpeg",
+  "/10.jpeg",
+  "/11.jpeg",
+  "/12.jpeg",
+  "/13.jpeg",
+  "/14.jpeg",
+  "/15.jpeg",
+  
 ];
+
+export const phoneNumber = "+971557454523";
