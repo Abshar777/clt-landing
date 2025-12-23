@@ -7,83 +7,83 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 
+export const teamMembers = [
+  {
+    id: 18,
+    name: "Edwin Joy",
+    type: "Mentors",
+    role: "Master Of Academics",
+    bio: "Master Of Academics",
+    imageUrl: '/t18.jpeg',
+    qualifications:
+      "BTech, MTech, MBA, PGDIM, PGDHRM,Certified from NPTEL, IRADAI",
+    achievements:
+      "Published 11 Journal papers above impact factor 5 with ISBN number",
+    experience:
+      "Former Vice Principal, Polytechnic and Engg. College.9 years of trading experience in both Indian Market, Forex market Focused in gold, silver, WTI oil, UJ, US30, NASDAQ",
+  },
+  {
+    id: 40,
+    name: "Ashwin",
+    type: "Mentors",
+    role: "Senior mentor",
+    bio: "Senior mentor",
+    imageUrl: '/t40.jpeg',
+    qualifications: "Bachelor of commerce, Diploma in Hospitality Managment",
+    experience: "Former Bank employee at Co operative bank",
+  },
 
+  {
+    id: 20,
+    name: "Rafat ",
+    type: "Mentors",
+    role: "Trading mentor",
+    bio: "Trading mentor",
+    imageUrl: '/t20.png',
+    qualifications: "BBA, Masters in Project Management.",
+    comfortableAreaInTrading: "Gold and BTC",
+    experience: "7+ years in Financial Markets, 4 Years in Forex Market.",
+  },
+  {
+    id: 28,
+    name: "Nihal ",
+    type: "Mentors",
+    role: "Trading mentor",
+    bio: "Trading mentor",
+    imageUrl: '/t20-1.png',
+    qualifications: "BBA graduate",
+    comfortableAreaInTrading: "Nasdaq & S&P500 indices",
+    experience:
+      "6 years of trading experience in both Indian Market, Forex market",
+  },
+  {
+    id: 19,
+    name: "Sriram",
+    type: "Mentors",
+    role: "Trading mentor",
+    bio: "Trading mentor",
+    imageUrl: '/t19.png',
+    qualifications: "B.E, MBA, Certified from NISM- PGCCM",
+    achievements:
+      "Created 200+ educational YouTube videos on Forex & financial markets, Mentored 100+ traders across the GCC region",
+    experience:
+      "6+ years GCC experience in financial markets, Former Deputy Manager – Kotak Securities Limited, 7+ years trading experience across Indian markets, Forex & Crypto, Core focus on Gold, Silver, GBPUSD, EURUSD & NASDAQ",
+  },
+  {
+    id: 45,
+    name: "Mathson Mathew ",
+    type: "Mentors",
+    role: "Junior Mentor",
+    bio: "Junior Mentor",
+    imageUrl: '/t45.jpeg',
+    qualifications: "B Tech in Mechanical Engineering ",
+    comfortableAreaInTrading: "Currency Pairs",
+    experience:
+      "4+ years of market experience. 2 year experience as a Forex Mentor. Expertise in swing trading with proper risk management and psychology and also worked in trading sales field. ",
+  },
+];
 export default function OurTeam() {
-  const teamMembers = [
-    {
-      id: 18,
-      name: "Edwin Joy",
-      type: "Mentors",
-      role: "Master Of Academics",
-      bio: "Master Of Academics",
-      imageUrl: '/t18.jpeg',
-      qualifications:
-        "BTech, MTech, MBA, PGDIM, PGDHRM,Certified from NPTEL, IRADAI",
-      achievements:
-        "Published 11 Journal papers above impact factor 5 with ISBN number",
-      experience:
-        "Former Vice Principal, Polytechnic and Engg. College.9 years of trading experience in both Indian Market, Forex market Focused in gold, silver, WTI oil, UJ, US30, NASDAQ",
-    },
-    {
-      id: 40,
-      name: "Ashwin",
-      type: "Mentors",
-      role: "Senior mentor",
-      bio: "Senior mentor",
-      imageUrl: '/t40.jpeg',
-      qualifications: "Bachelor of commerce, Diploma in Hospitality Managment",
-      experience: "Former Bank employee at Co operative bank",
-    },
 
-    {
-      id: 20,
-      name: "Rafat ",
-      type: "Mentors",
-      role: "Trading mentor",
-      bio: "Trading mentor",
-      imageUrl: '/t20.png',
-      qualifications: "BBA, Masters in Project Management.",
-      comfortableAreaInTrading: "Gold and BTC",
-      experience: "7+ years in Financial Markets, 4 Years in Forex Market.",
-    },
-    {
-      id: 28,
-      name: "Nihal ",
-      type: "Mentors",
-      role: "Trading mentor",
-      bio: "Trading mentor",
-      imageUrl: '/t20-1.png',
-      qualifications: "BBA graduate",
-      comfortableAreaInTrading: "Nasdaq & S&P500 indices",
-      experience:
-        "6 years of trading experience in both Indian Market, Forex market",
-    },
-    {
-      id: 19,
-      name: "Sriram",
-      type: "Mentors",
-      role: "Trading mentor",
-      bio: "Trading mentor",
-      imageUrl: '/t19.png',
-      qualifications: "B.E, MBA, Certified from NISM- PGCCM",
-      achievements:
-        "Created 200+ educational YouTube videos on Forex & financial markets, Mentored 100+ traders across the GCC region",
-      experience:
-        "6+ years GCC experience in financial markets, Former Deputy Manager – Kotak Securities Limited, 7+ years trading experience across Indian markets, Forex & Crypto, Core focus on Gold, Silver, GBPUSD, EURUSD & NASDAQ",
-    },
-    {
-      id: 45,
-      name: "Mathson Mathew ",
-      type: "Mentors",
-      role: "Junior Mentor",
-      bio: "Junior Mentor",
-      imageUrl: '/t45.jpeg',
-      qualifications: "B Tech in Mechanical Engineering ",
-      comfortableAreaInTrading: "Currency Pairs",
-      experience:
-        "4+ years of market experience. 2 year experience as a Forex Mentor. Expertise in swing trading with proper risk management and psychology and also worked in trading sales field. ",
-    },
-  ];
 
   return (
     <div className="md:py-10 py-6 bg-slate-50">

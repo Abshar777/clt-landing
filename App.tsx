@@ -28,6 +28,8 @@ import OurTeam from "./components/mentors";
 import { Sparkles, X } from "lucide-react";
 import FAQ from "./components/faq";
 import VideoTestimonials from "./components/videoTestimonials";
+import FinalCTA from "./components/cta";
+import ProfitResults from "./components/results";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -102,14 +104,13 @@ const App: React.FC = () => {
         >
           <div className="flex flex-col mb-10  items-center justify-center">
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-            Learn forex trading in
-            <br />
-            easy steps with <span className="text-red-600">CLT</span>
+              Learn forex trading in
+              <br />
+              easy steps with <span className="text-red-600">CLT</span>
             </h2>
             <p className="text-slate-500 mt-4 max-w-2xl mx-auto font-medium leading-relaxed">
               Our roadmap is designed to help you achieve your trading goals.
             </p>
-           
           </div>
           <div className="max-w-6xl mx-auto px-4 relative">
             {/* CURVED SVG PATH */}
@@ -169,7 +170,7 @@ const App: React.FC = () => {
             </div>
           </div>
         </main>
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {insight && (
             <motion.div
               initial={{ y: 100, opacity: 0, x: "-50%" }}
@@ -234,15 +235,18 @@ const App: React.FC = () => {
               </div>
             </motion.div>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
         <OurTeam />
         <Courses />
+        <ProfitResults />
         <Philosophy />
         <Testimonials />
         <VideoTestimonials />
+
         <EnrollForm />
         <FAQ />
         <BottomBar />
+        <FinalCTA />
       </main>
       <Footer />
     </div>

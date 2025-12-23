@@ -108,3 +108,46 @@ export const FAQS = [
     answer: "Yes! We have a global team of mentors across different time zones to ensure that no matter when you are trading, someone is there to support you."
   }
 ];
+
+
+
+export const PROFIT_RESULTS = [
+  {
+    pair: "XAUUSD",
+    type: "BUY",
+    profit: "$1,240.50",
+    status: "PROFIT",
+    date: "Today, 10:24 AM"
+  },
+  {
+    pair: "EURUSD",
+    type: "SELL",
+    profit: "$890.00",
+    status: "PROFIT",
+    date: "Today, 09:15 AM"
+  },
+  {
+    pair: "GBPUSD",
+    type: "BUY",
+    profit: "$2,105.20",
+    status: "PROFIT",
+    date: "Yesterday"
+  },
+  {
+    pair: "USDJPY",
+    type: "SELL",
+    profit: "$450.75",
+    status: "PROFIT",
+    date: "Yesterday"
+  }
+];
+
+// Phone-sized portrait screenshots
+export const PROFIT_SCREENSHOTS = [
+  "https://images.unsplash.com/photo-1611974714851-eb6055301353?q=80&w=800&auto=format&fit=crop&ar=9:16",
+  "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop&ar=9:16",
+  "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?q=80&w=800&auto=format&fit=crop&ar=9:16",
+  "https://images.unsplash.com/photo-1642388691919-617b01850f8b?q=80&w=800&auto=format&fit=crop&ar=9:16",
+  "https://images.unsplash.com/photo-1640341719917-0a442750e501?q=80&w=800&auto=format&fit=crop&ar=9:16",
+  "https://images.unsplash.com/photo-1642388591823-936660686950?q=80&w=800&auto=format&fit=crop&ar=9:16"
+];
