@@ -36,7 +36,7 @@ export const WhyCLT: React.FC = () => {
     <section id="why-clt" ref={sectionRef} className="py-24 bg-slate-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20 space-y-5">
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Why CLT <span className="text-red-600"><span style={{ textDecoration: 'line-through'  }} className="">Never</span> Always</span> Works</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Why CLT <span className="text-red-600"><span style={{ textDecoration: 'line-through', textDecorationColor: 'black' }} className="">Never</span> Always</span> Works</h2>
           <p className="text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed">
             At CLT Trading Academy, we don’t believe in quick fixes or hype. We believe in structure, discipline, and proven strategies.
           </p>
