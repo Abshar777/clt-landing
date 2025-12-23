@@ -17,12 +17,7 @@ export const Footer: React.FC = () => {
             <p className="text-slate-500 font-medium leading-relaxed">
               Institutional grade education for independent traders. We focus on clarity, discipline and structure.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="p-3 bg-slate-50 rounded-xl text-slate-400 hover:text-red-600 transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="p-3 bg-slate-50 rounded-xl text-slate-400 hover:text-red-600 transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="p-3 bg-slate-50 rounded-xl text-slate-400 hover:text-red-600 transition-colors"><Youtube size={20} /></a>
-              <a href="#" className="p-3 bg-slate-50 rounded-xl text-slate-400 hover:text-red-600 transition-colors"><Linkedin size={20} /></a>
-            </div>
+           
           </div>
 
           <div>
