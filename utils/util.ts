@@ -1,0 +1,9 @@
+export function minutesLeftUntilJan30_2026(): number {
+    const now = new Date(); // current date & time
+    const targetDate = new Date("2026-01-30T00:00:00"); // Jan 30, 2026
+  
+    const diffMs = targetDate.getTime() - now.getTime();
+    const diffMinutes = Math.floor(diffMs / (1000 * 60));
+  
+    return diffMinutes;
+  }
