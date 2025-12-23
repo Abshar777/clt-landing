@@ -86,7 +86,7 @@ export default function OurTeam() {
   ];
 
   return (
-    <div className="md:py-10 py-6 ">
+    <div className="md:py-10 py-6 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Title */}
         <div className="text-center mb-14 flex flex-col items-center justify-center ">
