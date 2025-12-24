@@ -31,6 +31,8 @@ import VideoTestimonials from "./components/videoTestimonials";
 import FinalCTA from "./components/cta";
 import ProfitResults from "./components/results";
 import { Toaster } from "sonner";
+import AwardsSection from "./components/awwards";
+import Videosection from "./components/videosection";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -241,6 +243,8 @@ const App: React.FC = () => {
         <OurTeam />
         <Courses />
         <ProfitResults />
+        <AwardsSection />
+        <Videosection />
         <Philosophy />
         <Testimonials />
         <VideoTestimonials />

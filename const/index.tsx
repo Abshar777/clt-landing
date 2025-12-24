@@ -7,7 +7,17 @@ import {
   Headphones, 
   Video, 
   Wallet, 
-  TrendingUp 
+  TrendingUp, 
+  Trophy,
+  Award,
+  Star,
+  Shield,
+  Medal,
+  Globe,
+  Zap,
+  Binary,
+  Cpu,
+  Briefcase
 } from 'lucide-react';
 
 export const ROADMAP_STEPS = [
@@ -161,5 +171,90 @@ export const PROFIT_SCREENSHOTS = [
   "/15.jpeg",
   
 ];
+
+
+export const AWARDS = [
+  {
+    id: 1,
+    title: "ProFx Awards",
+    year: "2024",
+    org: "Professional Forex Excellence",
+    icon: <Award className="w-8 h-8" />,
+    image: "/a1.jpeg"
+  },
+  {
+    id: 2,
+    title: "Global Islamic FinTech",
+    year: "2025",
+    org: "2nd Global Edition",
+    icon: <Shield className="w-8 h-8" />,
+    image: "/a2.jpeg"
+  },
+  {
+    id: 3,
+    title: "Annual Industry Awards",
+    year: "2025",
+    org: "MEA Finance",
+    icon: <Trophy className="w-8 h-8" />,
+    image: "/a3.jpeg"
+  },
+  {
+    id: 4,
+    title: "Gulf Finance Focus",
+    year: "2025",
+    org: "Middle East – UAE",
+    icon: <Medal className="w-8 h-8" />,
+    image: "/a4.jpeg"
+  },
+  {
+    id: 5,
+    title: "Finance Focus MEA",
+    year: "2025",
+    org: "Middle East & Africa Awards",
+    icon: <Star className="w-8 h-8" />,
+    image: "/a5.jpeg"
+  },
+  {
+    id: 6,
+    title: "iFX EXPO Dubai",
+    year: "2024",
+    org: "Global B2B Exhibition",
+    icon: <Globe className="w-8 h-8" />,
+    image: "/a6.jpeg"
+  },
+  {
+    id: 7,
+    title: "Leaders in Fintech",
+    year: "2025",
+    org: "Innovation Awards",
+    icon: <Zap className="w-8 h-8" />,
+    image: "/a7.jpeg"
+  },
+  {
+    id: 8,
+    title: "Middle East Blockchain",
+    year: "2025",
+    org: "MEBA Awards",
+    icon: <Binary className="w-8 h-8" />,
+    image: "/a8.webp"
+  },
+  {
+    id: 9,
+    title: "Banking Tech Summit",
+    year: "2025",
+    org: "MEA Finance",
+    icon: <Cpu className="w-8 h-8" />,
+    image: "/a9.jpeg"
+  },
+  {
+    id: 10,
+    title: "Finance Middle East",
+    year: "2025",
+    org: "Annual Excellence Awards",
+    icon: <Briefcase className="w-8 h-8" />,
+    image: "/a10.jpeg"
+  }
+];
+
 
 export const phoneNumber = "+971557454523";
