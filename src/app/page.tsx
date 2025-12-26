@@ -16,6 +16,7 @@ import ProfitResults from "@/components/results";
 
 import AwardsSection from "@/components/awwards";
 import Videosection from "@/components/videosection";
+import FullRoadmap from "@/components/fullRoadmap";
 
 export default function Home() {
   return (
@@ -23,11 +24,12 @@ export default function Home() {
       <WhatsappButton />
       <Hero />
       <WhyCLT />
-
+      <FullRoadmap/>
       <OurTeam />
       <Courses />
       <ProfitResults />
       <AwardsSection />
+
       <Videosection />
       <Philosophy />
       <Testimonials />
