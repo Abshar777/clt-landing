@@ -1,14 +1,15 @@
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import { AWARDS } from '@/const';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { AWARDS } from "@/const";
+import Image from "next/image";
 
 const AwardsSection: React.FC = () => {
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -16,7 +17,7 @@ const AwardsSection: React.FC = () => {
           >
             Global Recognition
           </motion.div>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -26,14 +27,16 @@ const AwardsSection: React.FC = () => {
             A Multi-Award Winning <br />
             <span className="text-red-600 italic">Trading Powerhouse</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             className="text-slate-500 max-w-2xl mx-auto font-medium"
           >
-            Our commitment to excellence in financial education and technology is recognized by the most prestigious organizations in the Middle East and beyond.
+            Our commitment to excellence in financial education and technology
+            is recognized by the most prestigious organizations in the Middle
+            East and beyond.
           </motion.p>
         </div>
 
@@ -49,9 +52,16 @@ const AwardsSection: React.FC = () => {
               className="relative group p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:border-red-600/30 hover:bg-white hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300 text-center"
             >
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center overflow-hidden text-red-600 mx-auto mb-4 shadow-sm group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
-                <img src={award.image} alt={award.title} width={64} className='object-cover w-full h-full' height={64} />
+                <Image
+                  placeholder="blur"
+                  height={64}
+                  src={award.image}
+                  alt={award.title}
+                  width={64}
+                  className="object-cover w-full h-full"
+                />
               </div>
-              
+
               <div className="relative z-10">
                 <p className="text-red-600 font-black text-[10px] uppercase tracking-widest mb-1.5">
                   Winner {award.year}
@@ -70,8 +80,6 @@ const AwardsSection: React.FC = () => {
           ))}
         </div>
         {/* <img src="" alt="" /> */}
-
-      
       </div>
     </section>
   );

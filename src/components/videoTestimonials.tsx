@@ -1,4 +1,4 @@
-
+"use client"
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Play, Star, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react';

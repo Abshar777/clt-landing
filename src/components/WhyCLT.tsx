@@ -1,4 +1,4 @@
-
+"use client"
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { BookOpen, Users, Headphones, GraduationCap, BarChart3, CloudLightning } from 'lucide-react';

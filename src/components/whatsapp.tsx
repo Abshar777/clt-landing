@@ -1,4 +1,4 @@
-
+"use client"
 // import { phoneNumber } from "@/const/data";
 import { phoneNumber } from "@/const";
 import React from "react";

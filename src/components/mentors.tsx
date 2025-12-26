@@ -1,11 +1,17 @@
 "use client";
 
 import React from "react";
-import Image from "react-image";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
+import t18 from "@/../public/t18.jpeg";
+import t40 from "@/../public/t40.jpeg";
+import t20 from "@/../public/t20.png";
+import t20_1 from "@/../public/t20-1.png";
+import t19 from "@/../public/t19.png";
+import t45 from "@/../public/t45.jpeg";
 
 export const teamMembers = [
   {
@@ -14,7 +20,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Master Of Academics",
     bio: "Master Of Academics",
-    imageUrl: '/t18.jpeg',
+    imageUrl: t18,
     qualifications:
       "BTech, MTech, MBA, PGDIM, PGDHRM,Certified from NPTEL, IRADAI",
     achievements:
@@ -28,7 +34,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Senior mentor",
     bio: "Senior mentor",
-    imageUrl: '/t40.jpeg',
+    imageUrl: t40,
     qualifications: "Bachelor of commerce, Diploma in Hospitality Managment",
     experience: "Former Bank employee at Co operative bank",
   },
@@ -39,7 +45,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Trading mentor",
     bio: "Trading mentor",
-    imageUrl: '/t20.png',
+    imageUrl: t20,
     qualifications: "BBA, Masters in Project Management.",
     comfortableAreaInTrading: "Gold and BTC",
     experience: "7+ years in Financial Markets, 4 Years in Forex Market.",
@@ -50,7 +56,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Trading mentor",
     bio: "Trading mentor",
-    imageUrl: '/t20-1.png',
+    imageUrl: t20_1,
     qualifications: "BBA graduate",
     comfortableAreaInTrading: "Nasdaq & S&P500 indices",
     experience:
@@ -62,7 +68,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Trading mentor",
     bio: "Trading mentor",
-    imageUrl: '/t19.png',
+    imageUrl: t19,
     qualifications: "B.E, MBA, Certified from NISM- PGCCM",
     achievements:
       "Created 200+ educational YouTube videos on Forex & financial markets, Mentored 100+ traders across the GCC region",
@@ -75,7 +81,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Junior Mentor",
     bio: "Junior Mentor",
-    imageUrl: '/t45.jpeg',
+    imageUrl: t45,
     qualifications: "B Tech in Mechanical Engineering ",
     comfortableAreaInTrading: "Currency Pairs",
     experience:
@@ -123,10 +129,13 @@ export default function OurTeam() {
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10"></div>
 
-                  <img
+                  <Image
                     src={member.imageUrl}
                     alt={member.name}
                     className="w-full aspect-[1/1.35] object-cover rounded-2xl transform transition duration-500 group-hover:scale-110"
+                    width={500}
+                    height={500}
+                    placeholder="blur"
                   />
                 </div>
 

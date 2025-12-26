@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { Mail, Phone, ArrowRight, Wallet, Loader2 } from "lucide-react";
 
@@ -54,6 +55,9 @@ export const EnrollForm: React.FC = () => {
 
       toast.success("Message sent successfully");
       setFormData({
+        fname: "",
+        lname: "",
+        message: "",
         email: "",
         phone: "",
       });

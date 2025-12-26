@@ -1,4 +1,4 @@
-
+"use client"
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, ArrowUpRight, ArrowDownRight, CheckCircle2, Smartphone } from 'lucide-react';
@@ -6,6 +6,7 @@ import { PROFIT_RESULTS, PROFIT_SCREENSHOTS } from '../const';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode } from 'swiper/modules';
 import { teamMembers } from './mentors';
+import Image from 'next/image';
 
 const ProfitResults: React.FC = () => {
   return (
@@ -46,7 +47,10 @@ const ProfitResults: React.FC = () => {
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10"></div>
 
-                  <img
+                  <Image
+                    width={500}
+                    height={500}
+                    placeholder="blur"
                     src={member}
                     alt="Profit Screenshot"
                     className="w-full aspect-[1/2] object-cover rounded-2xl transform transition duration-500 group-hover:scale-110"

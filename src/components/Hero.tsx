@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import {
@@ -108,6 +109,9 @@ export const Hero: React.FC = () => {
 
       toast.success("Message sent successfully");
       setFormData({
+        fname: "",
+        lname: "",
+        message: "",
         email: "",
         phone: "",
       });

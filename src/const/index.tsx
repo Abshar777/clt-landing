@@ -19,6 +19,34 @@ import {
   Cpu,
   Briefcase
 } from 'lucide-react';
+import p1 from "@/../public/1.jpeg";      
+import p2 from "@/../public/2.jpeg";
+import p3 from "@/../public/3.jpeg";
+import p4 from "@/../public/4.jpeg";
+import p5 from "@/../public/5.jpeg";
+import p6 from "@/../public/6.jpeg";
+import p7 from "@/../public/7.jpeg";
+import p8 from "@/../public/8.jpeg";
+import p9 from "@/../public/9.jpeg";
+import p10 from "@/../public/10.jpeg";    
+import p11 from "@/../public/11.jpeg";
+import p12 from "@/../public/12.jpeg";
+import p13 from "@/../public/13.jpeg";
+import p14 from "@/../public/14.jpeg";
+import p15 from "@/../public/15.jpeg";
+
+
+import a1 from "@/../public/a1.jpeg";
+import a2 from "@/../public/a2.jpeg";
+import a3 from "@/../public/a3.jpeg";
+import a4 from "@/../public/a4.jpeg";
+import a5 from "@/../public/a5.jpeg";
+import a6 from "@/../public/a6.jpeg";
+import a7 from "@/../public/a7.jpeg";
+import a8 from "@/../public/a8.webp";
+import a9 from "@/../public/a9.jpeg";
+import a10 from "@/../public/a10.jpeg";
+
 
 export const ROADMAP_STEPS = [
   {
@@ -154,21 +182,22 @@ export const PROFIT_RESULTS = [
 
 // Phone-sized portrait screenshots
 export const PROFIT_SCREENSHOTS = [
-  "/1.jpeg",
-  "/2.jpeg",
-  "/3.jpeg",
-  "/4.jpeg",
-  "/5.jpeg",
-  "/6.jpeg",
-  "/7.jpeg",
-  "/8.jpeg",
-  "/9.jpeg",
-  "/10.jpeg",
-  "/11.jpeg",
-  "/12.jpeg",
-  "/13.jpeg",
-  "/14.jpeg",
-  "/15.jpeg",
+    p1,
+  p2,
+  p3,
+  p4,
+  p5,
+  p6,
+  p7,
+  p8,
+  p9,
+  p10,
+  p11,
+  p12,
+  p13,
+  p14,
+  p15,
+  
   
 ];
 
@@ -180,7 +209,7 @@ export const AWARDS = [
     year: "2024",
     org: "Professional Forex Excellence",
     icon: <Award className="w-8 h-8" />,
-    image: "/a1.jpeg"
+    image: a1,
   },
   {
     id: 2,
@@ -188,7 +217,7 @@ export const AWARDS = [
     year: "2025",
     org: "2nd Global Edition",
     icon: <Shield className="w-8 h-8" />,
-    image: "/a2.jpeg"
+    image: a2,
   },
   {
     id: 3,
@@ -196,7 +225,7 @@ export const AWARDS = [
     year: "2025",
     org: "MEA Finance",
     icon: <Trophy className="w-8 h-8" />,
-    image: "/a3.jpeg"
+    image: a3,
   },
   {
     id: 4,
@@ -204,7 +233,7 @@ export const AWARDS = [
     year: "2025",
     org: "Middle East – UAE",
     icon: <Medal className="w-8 h-8" />,
-    image: "/a4.jpeg"
+    image: a4,
   },
   {
     id: 5,
@@ -212,7 +241,7 @@ export const AWARDS = [
     year: "2025",
     org: "Middle East & Africa Awards",
     icon: <Star className="w-8 h-8" />,
-    image: "/a5.jpeg"
+    image: a5,
   },
   {
     id: 6,
@@ -220,7 +249,7 @@ export const AWARDS = [
     year: "2024",
     org: "Global B2B Exhibition",
     icon: <Globe className="w-8 h-8" />,
-    image: "/a6.jpeg"
+    image: a6,
   },
   {
     id: 7,
@@ -228,7 +257,7 @@ export const AWARDS = [
     year: "2025",
     org: "Innovation Awards",
     icon: <Zap className="w-8 h-8" />,
-    image: "/a7.jpeg"
+    image: a7,
   },
   {
     id: 8,
@@ -236,7 +265,7 @@ export const AWARDS = [
     year: "2025",
     org: "MEBA Awards",
     icon: <Binary className="w-8 h-8" />,
-    image: "/a8.webp"
+    image: a8,
   },
   {
     id: 9,
@@ -244,7 +273,7 @@ export const AWARDS = [
     year: "2025",
     org: "MEA Finance",
     icon: <Cpu className="w-8 h-8" />,
-    image: "/a9.jpeg"
+    image: a9,
   },
   {
     id: 10,
@@ -252,7 +281,7 @@ export const AWARDS = [
     year: "2025",
     org: "Annual Excellence Awards",
     icon: <Briefcase className="w-8 h-8" />,
-    image: "/a10.jpeg"
+    image: a10,
   }
 ];
 
