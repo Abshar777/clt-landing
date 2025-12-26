@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 CLT Academy Head Office <br />M09, Al&nbsp;Shaibani Building,
-                Hor&bsp;Al&nbsp;Anz&nbsp;East, Dubai, United Arab Emirates.
+                Hor&nbsp;Al&nbsp;Anz&nbsp;East, Dubai, United Arab Emirates.
               </li>
               <li>
                 <a
