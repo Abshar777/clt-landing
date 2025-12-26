@@ -54,24 +54,7 @@ export const Testimonials: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-y border-slate-100">
-          <div className="text-center">
-            <div className="text-3xl font-black text-slate-900 mb-1">5,000+</div>
-            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Students Trained</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-black text-slate-900 mb-1">$2M+</div>
-            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Total Funding</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-black text-slate-900 mb-1">82%</div>
-            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Success Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-black text-slate-900 mb-1">24/7</div>
-            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Community Support</div>
-          </div>
-        </div>
+      
       </div>
     </section>
   );

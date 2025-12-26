@@ -155,7 +155,7 @@ export const Hero: React.FC = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
           </span>
-          Last Few Days Remaining
+          CLAIM YOURS <span className="text-red-600 font-bold">FREE</span> EDUCATIONAL ACCOUNT
         </div>
 
         <h1

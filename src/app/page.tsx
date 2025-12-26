@@ -17,14 +17,16 @@ import ProfitResults from "@/components/results";
 import AwardsSection from "@/components/awwards";
 import Videosection from "@/components/videosection";
 import FullRoadmap from "@/components/fullRoadmap";
+import { Counter } from "@/components/counter";
 
 export default function Home() {
   return (
-    <main>
+    <main className="">
       <WhatsappButton />
       <Hero />
+      <Counter />
       <WhyCLT />
-      <FullRoadmap/>
+      <FullRoadmap />
       <OurTeam />
       <Courses />
       <ProfitResults />
