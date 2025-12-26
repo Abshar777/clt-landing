@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Mail, Phone, ArrowRight, Wallet, Loader2, User } from "lucide-react";
-
+import { CountryCode, parsePhoneNumberFromString } from "libphonenumber-js";
 import { toast } from "sonner";
 import { phoneNumber } from "@/const";
+import { detectCountry } from "@/utils/util";
 export const EnrollForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -11,6 +12,16 @@ export const EnrollForm: React.FC = () => {
     phone: "+971",
     message: "",
   });
+
+  const [countryCode, setCountryCode] = useState("AE");
+  useEffect(() => {
+    console.log("country", countryCode);
+    detectCountry().then((country) => {
+      setCountryCode(country as CountryCode);
+      console.log("country2", country);
+      formData.phone = country;
+    });
+  }, []);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isValidPhone, setIsValidPhone] = useState(false);
@@ -25,16 +36,28 @@ export const EnrollForm: React.FC = () => {
   };
 
   const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let input = e.target.value.replace(/\D/g, "");
-    if (input.startsWith("971")) input = input.substring(2);
-    if (input.length > 10) input = input.substring(0, 10);
+    const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const value = e.target.value;
 
-    let formatted = "+971";
-    if (input.length > 0) formatted += "-" + input.substring(0, 5);
-    if (input.length > 5) formatted += "-" + input.substring(5);
+      try {
+        const phoneNumber = parsePhoneNumberFromString(
+          value,
+          countryCode as CountryCode
+        );
 
-    setFormData({ ...formData, phone: formatted });
-    setIsValidPhone(input.length === 10);
+        if (phoneNumber) {
+          setFormData({
+            ...formData,
+            phone: phoneNumber.formatInternational(),
+          });
+          setIsValidPhone(phoneNumber.isValid());
+        } else {
+          setIsValidPhone(false);
+        }
+      } catch {
+        setIsValidPhone(false);
+      }
+    };
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -57,7 +80,7 @@ export const EnrollForm: React.FC = () => {
         name: "",
         message: "",
         email: "",
-        phone: "+971",
+        phone: countryCode,
       });
 
       window.open(
@@ -97,7 +120,7 @@ export const EnrollForm: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900">
-                      Free Funded Account
+                      Free Educational Account
                     </h4>
                     <p className="text-sm text-slate-500 font-medium">
                       Start trading with our capital on us.
