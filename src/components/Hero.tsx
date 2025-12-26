@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import {
@@ -10,6 +10,7 @@ import {
   Phone,
   ArrowRight,
   Loader2,
+  User,
 } from "lucide-react";
 import { TimeDisplay } from "./timer/TimeDisplay";
 import { minutesLeftUntilJan30_2026 } from "@/utils/util";
@@ -60,10 +61,9 @@ export const Hero: React.FC = () => {
   }, []);
 
   const [formData, setFormData] = useState({
-    fname: "",
-    lname: "",
+    name: "",
     email: "",
-    phone: "",
+    phone: "+971",
     message: "",
   });
 
@@ -81,10 +81,10 @@ export const Hero: React.FC = () => {
 
   const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let input = e.target.value.replace(/\D/g, "");
-    if (input.startsWith("91")) input = input.substring(2);
+    if (input.startsWith("971")) input = input.substring(2);
     if (input.length > 10) input = input.substring(0, 10);
 
-    let formatted = "+91";
+    let formatted = "+971";
     if (input.length > 0) formatted += "-" + input.substring(0, 5);
     if (input.length > 5) formatted += "-" + input.substring(5);
 
@@ -100,7 +100,7 @@ export const Hero: React.FC = () => {
       await fetch(url, {
         method: "POST",
         body: JSON.stringify({
-          Name: " ",
+          Name: formData?.name,
           Email: formData?.email,
           PhoneNumber: " " + formData?.phone + "_",
           Message: " ",
@@ -109,19 +109,16 @@ export const Hero: React.FC = () => {
 
       toast.success("Message sent successfully");
       setFormData({
-        fname: "",
-        lname: "",
+        name: "",
         message: "",
         email: "",
-        phone: "",
+        phone: "+971",
       });
 
       window.open(
         `https://wa.me/${phoneNumber.replace("+", "").replace(" ", "")}?text=${
-          formData.fname
-        } ${formData.lname} \n ${formData.email} \n${formData.phone} \n${
-          formData.message
-        }`
+          formData?.name
+        } \n ${formData?.email} \n${formData?.phone} \n${formData?.message}`
       );
     } catch (error) {
       console.error(error);
@@ -155,7 +152,8 @@ export const Hero: React.FC = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
           </span>
-          CLAIM YOURS <span className="text-red-600 font-bold">FREE</span> EDUCATIONAL ACCOUNT
+          CLAIM YOURS <span className="text-red-600 font-bold">FREE</span>{" "}
+          EDUCATIONAL ACCOUNT
         </div>
 
         <h1
@@ -212,6 +210,20 @@ export const Hero: React.FC = () => {
               Start My Trading Journey
             </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="relative">
+                <User
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
+                  size={18}
+                />
+                <input
+                  value={formData?.name}
+                  onChange={handleChange}
+                  type="text"
+                  name="name"
+                  placeholder="Enter Your Name"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-6 text-white placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
+                />
+              </div>
               <div className="relative">
                 <Mail
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"

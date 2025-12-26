@@ -1,15 +1,14 @@
-"use client"
+"use client";
 import React, { useState } from "react";
-import { Mail, Phone, ArrowRight, Wallet, Loader2 } from "lucide-react";
+import { Mail, Phone, ArrowRight, Wallet, Loader2, User } from "lucide-react";
 
 import { toast } from "sonner";
 import { phoneNumber } from "@/const";
 export const EnrollForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    fname: "",
-    lname: "",
+    name: "",
     email: "",
-    phone: "",
+    phone: "+971",
     message: "",
   });
 
@@ -27,10 +26,10 @@ export const EnrollForm: React.FC = () => {
 
   const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let input = e.target.value.replace(/\D/g, "");
-    if (input.startsWith("91")) input = input.substring(2);
+    if (input.startsWith("971")) input = input.substring(2);
     if (input.length > 10) input = input.substring(0, 10);
 
-    let formatted = "+91";
+    let formatted = "+971";
     if (input.length > 0) formatted += "-" + input.substring(0, 5);
     if (input.length > 5) formatted += "-" + input.substring(5);
 
@@ -46,7 +45,7 @@ export const EnrollForm: React.FC = () => {
       await fetch(url, {
         method: "POST",
         body: JSON.stringify({
-          Name: " ",
+          Name: formData?.name,
           Email: formData?.email,
           PhoneNumber: " " + formData?.phone + "_",
           Message: " ",
@@ -55,19 +54,16 @@ export const EnrollForm: React.FC = () => {
 
       toast.success("Message sent successfully");
       setFormData({
-        fname: "",
-        lname: "",
+        name: "",
         message: "",
         email: "",
-        phone: "",
+        phone: "+971",
       });
 
       window.open(
         `https://wa.me/${phoneNumber.replace("+", "").replace(" ", "")}?text=${
-          formData?.fname
-        } ${formData?.lname} \n ${formData?.email} \n${formData?.phone} \n${
-          formData?.message
-        }`
+          formData?.name
+        } \n ${formData?.email} \n${formData?.phone} \n${formData?.message}`
       );
     } catch (error) {
       console.error(error);
@@ -118,6 +114,20 @@ export const EnrollForm: React.FC = () => {
                   Start My Trading Journey
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="relative">
+                    <User
+                      className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
+                      size={18}
+                    />
+                    <input
+                      value={formData?.name}
+                      onChange={handleChange}
+                      type="text"
+                      name="name"
+                      placeholder="Enter Your Name"
+                      className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-6 text-white placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
+                    />
+                  </div>
                   <div className="relative">
                     <Mail
                       className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
