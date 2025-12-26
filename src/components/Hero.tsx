@@ -13,10 +13,11 @@ import {
   User,
 } from "lucide-react";
 import { TimeDisplay } from "./timer/TimeDisplay";
-import { minutesLeftUntilJan30_2026 } from "@/utils/util";
+import { detectCountry, minutesLeftUntilJan30_2026 } from "@/utils/util";
 import { toast } from "sonner";
 import { useState } from "react";
 import { phoneNumber } from "@/const";
+import parsePhoneNumberFromString, { CountryCode } from "libphonenumber-js";
 
 export const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -67,6 +68,16 @@ export const Hero: React.FC = () => {
     message: "",
   });
 
+  const [countryCode, setCountryCode] = useState("AE");
+  useEffect(() => {
+    console.log("country", countryCode);
+    detectCountry().then((country) => {
+      setCountryCode(country as CountryCode);
+      console.log("country2", country);
+      formData.phone = country;
+    });
+  }, []);
+
   const [isLoading, setIsLoading] = useState(false);
   const [isValidPhone, setIsValidPhone] = useState(false);
 
@@ -80,16 +91,28 @@ export const Hero: React.FC = () => {
   };
 
   const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let input = e.target.value.replace(/\D/g, "");
-    if (input.startsWith("971")) input = input.substring(2);
-    if (input.length > 10) input = input.substring(0, 10);
+    const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const value = e.target.value;
 
-    let formatted = "+971";
-    if (input.length > 0) formatted += "-" + input.substring(0, 5);
-    if (input.length > 5) formatted += "-" + input.substring(5);
+      try {
+        const phoneNumber = parsePhoneNumberFromString(
+          value,
+          countryCode as CountryCode
+        );
 
-    setFormData({ ...formData, phone: formatted });
-    setIsValidPhone(input.length === 10);
+        if (phoneNumber) {
+          setFormData({
+            ...formData,
+            phone: phoneNumber.formatInternational(),
+          });
+          setIsValidPhone(phoneNumber.isValid());
+        } else {
+          setIsValidPhone(false);
+        }
+      } catch {
+        setIsValidPhone(false);
+      }
+    };
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -112,7 +135,7 @@ export const Hero: React.FC = () => {
         name: "",
         message: "",
         email: "",
-        phone: "+971",
+        phone: countryCode,
       });
 
       window.open(
