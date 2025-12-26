@@ -95,8 +95,7 @@ export const Footer: React.FC = () => {
               </li>
               <li><a href={`tel:${phoneNumber}`} className="text-red-600 underline">{phoneNumber}</a></li>
               <li>
-                CLT Academy – Head Office M09, Al Shaibani Building, Hor Al Anz
-                East, Dubai, United Arab Emirates.
+              CLT Academy Head Office M09, Al&nbsp;Shaibani&nbsp;Building, Hor&nbsp;Al&nbsp;Anz&nbsp;East, Dubai, United Arab Emirates
               </li>
               <li>
                 <a href={`https://wa.me/${phoneNumber.replace("+", "").replace(" ", "")}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`} className="text-red-600 underline">
