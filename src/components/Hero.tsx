@@ -221,7 +221,7 @@ export const Hero: React.FC = () => {
                   type="text"
                   name="name"
                   placeholder="Enter Your Name"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-6 text-white placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
+                  className="w-full bg-black/5 border border-black/10 rounded-2xl py-4 pl-12 pr-6 text-black placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
                 />
               </div>
               <div className="relative">
