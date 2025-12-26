@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { CheckCircle2, Crown, Zap, Clock } from "lucide-react";
@@ -58,28 +58,30 @@ export const Courses: React.FC = () => {
               Beginner Trading Course
             </p>
 
-            <ul className="space-y-4 mb-12">
-              {[
-                "Trading principles",
-                "Risk management basics",
-                "Strategy development",
-                "Support & Resistance",
-                "MT5 platform training",
-                "Trading psychology & discipline",
-              ].map((item, i) => (
-                <li
-                  key={i}
-                  className="flex items-center gap-3 text-slate-700 font-semibold text-sm"
-                >
-                  <CheckCircle2 className="text-red-600" size={18} />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className="flex flex-1 h-full  flex-col ">
+              <ul className="space-y-4 mb-12">
+                {[
+                  "Trading principles",
+                  "Risk management basics",
+                  "Strategy development",
+                  "Support & Resistance",
+                  "MT5 platform training",
+                  "Trading psychology & discipline",
+                ].map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 text-slate-700 font-semibold text-sm"
+                  >
+                    <CheckCircle2 className="text-red-600" size={18} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
 
-            <button className="w-full py-5 bg-white text-slate-900 border-2 border-slate-200 rounded-2xl font-bold hover:bg-black hover:text-white transition-all shadow-lg text-lg">
-              Start with Traders Craft
-            </button>
+              <button className="w-full py-5  left-0 md:translate-y-[6.5rem]    bg-white text-slate-900 border-2 border-slate-200 rounded-2xl font-bold hover:bg-black hover:text-white transition-all shadow-lg text-lg">
+                Start with Traders Craft
+              </button>
+            </div>
           </div>
 
           {/* 2. Profit Matrix – Intermediate */}
@@ -214,7 +216,7 @@ export const Courses: React.FC = () => {
               ))}
             </ul>
 
-            <button className="w-full py-5 bg-black text-white rounded-2xl font-bold hover:bg-red-600 transition-all shadow-lg text-lg">
+            <button className="w-full py-5 md:translate-y-[4.5rem]    bg-black text-white rounded-2xl font-bold hover:bg-red-600 transition-all shadow-lg text-lg">
               Master Consistency with Market Code
             </button>
           </div>

@@ -13,6 +13,36 @@ import t20_1 from "@/../public/t20-1.png";
 import t19 from "@/../public/t19.png";
 import t45 from "@/../public/t45.jpeg";
 
+// Nihal Azhikodan
+
+// Indices Scalper | Market Structure & Volume Trader
+// 4+ years of experience trading indices with a strong focus on market structure, liquidity, and volume. Known for execution discipline, risk control, and psychological stability. Teaches traders to build a repeatable, process-driven trading system.
+
+// Mathson Mathew
+
+// Forex Trader | Smart Money Concepts
+// Active in Forex markets for 4+ years, specializing in major and minor currency pairs. Trades using Smart Money Concepts, liquidity inducement, and market structure with strict risk management. Focuses on clarity, consistency, and disciplined execution.
+
+// Edwin Joy
+
+// Professional Forex Trader | SNR & Volume Specialist
+// 9+ years of trading experience specializing in Malaysian SNR, candle liquidity, and chart patterns. Trades Gold, Silver, Crude Oil, US30, and US100. Provides portfolio and capital management with swing and intraday strategies.
+
+// Rafat Shaik
+
+// Trading Mentor | Stocks & Forex
+// 7+ years of hands-on experience across Indian stock and Forex markets. Specializes in Gold, Silver, and major currency pairs. Certified in Smart Money Concepts, Price Action, and Trading Fundamentals, with a structured, market-driven approach.
+
+// Ashwin Sudarsh
+
+// Professional Stock & Forex Trader | SMC Specialist
+// Active since 2019, specializing in Smart Money Concepts, market structure, liquidity engineering, and FVGs. Trades with a rule-based, risk-controlled approach. Mentors traders to execute professionally without signal dependency.
+
+// Sriram S
+
+// Trader & Mentor | Forex & Crypto
+// 7+ years of experience in Forex and Crypto markets. Specializes in Smart Money Concepts, market structure, and liquidity dynamics. Known for disciplined execution and mentoring traders to become confident, independent decision-makers
+
 export const teamMembers = [
   {
     id: 18,
@@ -20,6 +50,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Master Of Academics",
     bio: "Master Of Academics",
+    det: "professional forex trader with expertise in chart patterns and volume analysis. With 9+ years of experience, I specialize in Malaysian SNR, candle liquidity analysis, and chart patterns.",
     imageUrl: t18,
     qualifications:
       "BTech, MTech, MBA, PGDIM, PGDHRM,Certified from NPTEL, IRADAI",
@@ -34,6 +65,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Senior mentor",
     bio: "Senior mentor",
+    det: "Professional Stock & Forex Trader | SMC Specialist Active since 2019, specializing in Smart Money Concepts, market structure, liquidity engineering, and FVGs. Trades with a rule-based, risk-controlled approach. Mentors traders to execute professionally without signal dependency.",
     imageUrl: t40,
     qualifications: "Bachelor of commerce, Diploma in Hospitality Managment",
     experience: "Former Bank employee at Co operative bank",
@@ -45,6 +77,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Trading mentor",
     bio: "Trading mentor",
+    det: "Trading Mentor | Stocks & Forex 7+ years of hands-on experience across Indian stock and Forex markets. Specializes in Gold, Silver, and major currency pairs. Certified in Smart Money Concepts, Price Action, and Trading Fundamentals, with a structured, market-driven approach.",
     imageUrl: t20,
     qualifications: "BBA, Masters in Project Management.",
     comfortableAreaInTrading: "Gold and BTC",
@@ -56,6 +89,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Trading mentor",
     bio: "Trading mentor",
+    det: "Indices Scalper | Market Structure & Volume Trader 4+ years of experience trading indices with a strong focus on market structure, liquidity, and volume. Known for execution discipline, risk control, and psychological stability. Teaches traders to build a repeatable, process-driven trading system.",
     imageUrl: t20_1,
     qualifications: "BBA graduate",
     comfortableAreaInTrading: "Nasdaq & S&P500 indices",
@@ -68,6 +102,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Trading mentor",
     bio: "Trading mentor",
+    det: "Trader & Mentor | Forex & Crypto 7+ years of experience in Forex and Crypto markets. Specializes in Smart Money Concepts, market structure, and liquidity dynamics. Known for disciplined execution and mentoring traders to become confident, independent decision-makers",
     imageUrl: t19,
     qualifications: "B.E, MBA, Certified from NISM- PGCCM",
     achievements:
@@ -81,6 +116,7 @@ export const teamMembers = [
     type: "Mentors",
     role: "Junior Mentor",
     bio: "Junior Mentor",
+    det: "Forex Trader | Smart Money Concepts Active in Forex markets for 4+ years, specializing in major and minor currency pairs. Trades using Smart Money Concepts, liquidity inducement, and market structure with strict risk management. Focuses on clarity, consistency, and disciplined execution.",
     imageUrl: t45,
     qualifications: "B Tech in Mechanical Engineering ",
     comfortableAreaInTrading: "Currency Pairs",
@@ -89,8 +125,6 @@ export const teamMembers = [
   },
 ];
 export default function OurTeam() {
-
-
   return (
     <div className="md:py-10 py-6 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4">
@@ -122,10 +156,10 @@ export default function OurTeam() {
           className="!pb-12"
         >
           {teamMembers.map((member, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative image-anime bg-transparent rounded-xl overflow-hidden group">
+            <SwiperSlide className="group" key={index}>
+              <div className="relative cursor-pointer image-anime bg-transparent rounded-xl overflow-hidden ">
                 {/* Image Wrapper */}
-                <div className="relative overflow-hidden rounded-2xl bg-[#DBE0E3]">
+                <div className="relative group-hover:opacity-0 transition-all duration-500 overflow-hidden rounded-2xl bg-[#DBE0E3]">
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10"></div>
 
@@ -140,15 +174,22 @@ export default function OurTeam() {
                 </div>
 
                 {/* Content */}
-                <div className="absolute bottom-10 left-6 right-6 text-center z-20 transform translate-y-6 transition-all duration-500 group-hover:-translate-y-6">
+                <div className="absolute group-hover:hidden  bottom-10 left-6 right-6 text-center z-20 transform translate-y-6 transition-all duration-500 group-hover:-translate-y-6">
                   <h3 className="text-xl font-semibold text-white">
                     {member.name}
                   </h3>
 
                   {/* Description (hidden until hover) */}
-                  <p className="text-white/70 text-sm mt-3 opacity-100 group-hover:opacity-100 transition-all duration-500">
+                  <p className="text-white/70 group-hover:hidden text-sm mt-3 opacity-100 group-hover:opacity-100 transition-all duration-500">
                     {member.bio}
                   </p>
+                </div>
+                <div className="w-full absolute h-full top-0 hidden group-hover:flex opacity-0 group-hover:opacity-100 rounded-3xl transition-all duration-500    flex-col justify-center items-center bg-red-600 ">
+                  <h3 className="text-xl font-bold text-white">
+                    {member.name}
+                  </h3>
+
+                  <p className="text-xs text-center text-white/80"> {member.det}</p>
                 </div>
               </div>
             </SwiperSlide>

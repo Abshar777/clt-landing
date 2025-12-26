@@ -25,17 +25,17 @@ export default function Home() {
       <WhatsappButton />
       <Hero />
       <Counter />
+      <VideoTestimonials />
       <WhyCLT />
       <FullRoadmap />
       <OurTeam />
       <Courses />
       <ProfitResults />
       <AwardsSection />
-
       <Videosection />
+
       <Philosophy />
       <Testimonials />
-      <VideoTestimonials />
 
       <EnrollForm />
       <FAQ />

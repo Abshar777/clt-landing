@@ -183,7 +183,7 @@ export const PROFIT_RESULTS = [
 // Phone-sized portrait screenshots
 export const PROFIT_SCREENSHOTS = [
     p1,
-  p2,
+
   p3,
   p4,
   p5,

@@ -167,7 +167,7 @@ export const Hero: React.FC = () => {
         </h1>
 
         <p className="reveal-text text-sm md:text-xl text-slate-500 max-w-2xl mx-auto mb-5 font-medium">
-          APPLICATION DEADLINE : JAN 30 2026
+          Last Few Days Remaining
         </p>
         <div className="relative w-full flex items-center justify-center mb-4 z-10">
           <TimeDisplay totalSeconds={minutesLeftUntilJan30_2026()} />

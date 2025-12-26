@@ -71,6 +71,12 @@ body {
   --btn-transition: all 0.2s ease-out;
 }
 
+
+/* enable smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 .button-message {
   display: flex;
   justify-content: center;

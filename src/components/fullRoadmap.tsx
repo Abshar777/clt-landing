@@ -63,6 +63,7 @@ const FullRoadmap = () => {
   return (
     <main
       ref={roadmapRef}
+      id="roadmap"
       className="flex-grow grid-bg py-32 bg-slate-50 relative overflow-hidden"
     >
       <div className="flex flex-col mb-10  items-center justify-center">

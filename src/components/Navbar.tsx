@@ -1,6 +1,6 @@
-"use client"
-import React from 'react';
-import { CandlestickChart, ArrowUpRight } from 'lucide-react';
+"use client";
+import React from "react";
+import { CandlestickChart, ArrowUpRight } from "lucide-react";
 
 export const Navbar: React.FC = () => {
   return (
@@ -10,7 +10,11 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center gap-3 group cursor-pointer">
             <div className="relative">
               <div className="w-auto h-14 p-4  rounded-xl flex items-center justify-center text-white group-hover:bg-red-600 transition-all duration-500 transform group-hover:rotate-6">
-                <img src="/logo.png" alt="CLT Logo" className="w-auto drop-shadow-lg h-14" />
+                <img
+                  src="/logo.png"
+                  alt="CLT Logo"
+                  className="w-auto drop-shadow-lg h-14"
+                />
               </div>
               {/* <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-600 rounded-full border-2 border-white animate-ping"></div> */}
             </div>
@@ -21,19 +25,41 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-10 text-sm font-semibold text-slate-600">
-            <a href="#why-clt" className="hover:text-red-600 transition-colors py-2">Why CLT</a>
-            <a href="#courses" className="hover:text-red-600 transition-colors py-2">Programs</a>
-            <a href="#testimonials" className="hover:text-red-600 transition-colors py-2">Success Stories</a>
-            <a href="#enroll" className="hover:text-red-600 transition-colors py-2 ">Get Funded</a>
+            <a
+              href="#why-clt"
+              className="hover:text-red-600 transition-colors py-2"
+            >
+              Why CLT
+            </a>
+            <a
+              href="#courses"
+              className="hover:text-red-600 transition-colors py-2"
+            >
+              Programs
+            </a>
+            <a
+              href="#testimonials"
+              className="hover:text-red-600 transition-colors py-2"
+            >
+              Success Stories
+            </a>
+            <a
+              href="#enroll"
+              className="hover:text-red-600 transition-colors py-2 "
+            >
+              Get Funded
+            </a>
           </div>
 
           <div className="flex items-center gap-5">
-            <button className="hidden sm:block text-sm font-bold text-slate-900 hover:text-red-600 transition-colors">
-              Log in
-            </button>
             <button className="group relative flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-red-600 transition-all duration-300 shadow-xl hover:-translate-y-1">
-              Start Journey
-              <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <a href="#enroll" className="flex items-center justify-center gap-2">
+                Start Journey
+                <ArrowUpRight
+                  size={18}
+                  className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                />
+              </a>
             </button>
           </div>
         </div>
