@@ -18,6 +18,7 @@ import AwardsSection from "@/components/awwards";
 import Videosection from "@/components/videosection";
 import FullRoadmap from "@/components/fullRoadmap";
 import { Counter } from "@/components/counter";
+import RodmapV2 from "../components/roadmap/index";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
       <Counter />
       <VideoTestimonials />
       <WhyCLT />
-      <FullRoadmap />
+      <RodmapV2 />
       <OurTeam />
       <Courses />
       <ProfitResults />

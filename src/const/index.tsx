@@ -129,22 +129,44 @@ export const TESTIMONIALS = [
 ];
 
 export const FAQS = [
+
+//   FREQUENTLY ASKED QUESTIONS
+
+// 1. Who can learn trading?
+// Anyone above 18 years with proper mindset towards trading can join. No finance background is required.
+
+// 2. How long does it take to become a profitable trader?
+// There is no specific time period, it depends up on your consistency and smart work. The more you become consistent, less the time require to became profitable.
+
+//     3. How much capital is required to start trading?
+// Students of CLT Academy will be given 500 dollar initially for trading to ensure proper risk management, psychology and deal with emotions. 
+
+// 4. Do you provide a certificate after completion?
+// Yes, a course completion certificate is provided.
+
+// 5. Why should you join CLT academy?
+// Whether you are a complete beginner or an intermediate trader, our step-by-step curriculum ensures clarity, confidence, and consistency in your trading journey.
   {
-    question: "Do I need prior experience to join?",
-    answer: "Not at all! Our roadmap is designed to take you from zero to hero. We start with the absolute basics of forex and build your knowledge step-by-step."
+    question: "Who can learn trading?",
+    answer: "Anyone above 18 years with proper mindset towards trading can join. No finance background is required."
   },
   {
-    question: "What is the $500 trading account benefit?",
-    answer: "After completing the core modules and demonstrating consistency on demo, we provide a $500 funded account for you to practice live market conditions with our capital."
+    question: "How long does it take to become a profitable trader?",
+    answer: "There is no specific time period, it depends up on your consistency and smart work. The more you become consistent, less the time require to became profitable."
   },
   {
-    question: "How long does it take to become profitable?",
-    answer: "Trading speed varies by student, but most of our students begin seeing consistent results within 3 to 6 months of following the CLT Roadmap."
+    question: "How much capital is required to start trading?",
+    answer: "Students of CLT Academy will be given 500 dollar initially for trading to ensure proper risk management, psychology and deal with emotions."
   },
   {
-    question: "Is the mentorship really 24/7?",
-    answer: "Yes! We have a global team of mentors across different time zones to ensure that no matter when you are trading, someone is there to support you."
-  }
+    question: "Do you provide a certificate after completion?",
+    answer: "Yes, a course completion certificate is provided."
+  },
+  {
+    question: "Why should you join CLT academy?",
+    answer: "Whether you are a complete beginner or an intermediate trader, our step-by-step curriculum ensures clarity, confidence, and consistency in your trading journey."
+  },
+  
 ];
 
 
