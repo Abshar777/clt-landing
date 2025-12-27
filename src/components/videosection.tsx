@@ -11,14 +11,14 @@ const Videosection = () => {
         playsInline
         className="w-full z-  z-[99] h-[90vh] rounded-lg object-cover"
       /> */}
-      <div className="w-full h-[90vh] bg-black rounded-lg">
+      <div className="w-full md:h-[90vh] bg-black rounded-lg">
         <video
           src={"/l.mp4"}
           autoPlay
           muted
           loop
           playsInline
-          className="w-full opacity-50  z-[99] h-[90vh] rounded-lg object-cover"
+          className="w-full opacity-50  z-[99] md:h-[90vh] rounded-lg object-cover"
         />
       </div>
     </div>

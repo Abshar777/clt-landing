@@ -120,7 +120,7 @@ export const Hero: React.FC = () => {
     <>
       <section
         ref={heroRef}
-        className="relative  grid-bg w-full mt-2   hero-bg min-h-[90vh] flex items-center justify-center  pt-13  md:px-20  pb-20"
+        className="relative  grid-bg w-full mt-2   hero-bg min-h-[90vh] flex items-center justify-center  pt-13  md:px-20    pb-20"
       >
         <div className="absolute  z-[-1] flex flex-col items-center justify-center overflow-hidden rounded-2xl inset-0 top-0 w-full  ">
           <Image
@@ -147,13 +147,13 @@ export const Hero: React.FC = () => {
           }}
         ></div>
 
-        <div className=" mx-auto mt-4 px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-red-100 bg-red-50 text-red-600 text-[11px] font-bold uppercase tracking-widest mb-8 reveal-text">
-            <span className="relative flex h-2 w-2">
+        <div className=" md:mx-auto mt-4 w-[90%] lg:px-8 relative z-10 text-center">
+          <div className="inline-flex md:text-base text-xs  items-center gap-2 md:px-4 p-2 md:py-2 py-1 rounded-full border border-red-100 bg-red-50 text-red-600 md:text-[11px] text-[10px] font-bold uppercase tracking-widest mb-8 reveal-text">
+            <span className="relative  md:flex hidden h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
             </span>
-            CLAIM YOURS <span className="text-red-600 font-bold">FREE</span>{" "}
+            CLAIM YOURS <span className="text-red-600  font-bold">FREE</span>{" "}
             EDUCATIONAL ACCOUNT
           </div>
 
@@ -170,7 +170,7 @@ export const Hero: React.FC = () => {
           <p className="reveal-text text-sm md:text-xl text-slate-100  max-w-2xl mx-auto mb-5 font-medium">
             Last Few Days Remaining
           </p>
-          <div className="relative w-full flex items-center justify-center mb-4 z-10">
+          <div className="relative md:w-full w-[80%] mx-auto flex items-center justify-center mb-4 z-10">
             <TimeDisplay totalSeconds={minutesLeftUntilJan30_2026()} />
           </div>
 

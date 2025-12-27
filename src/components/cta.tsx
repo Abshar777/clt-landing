@@ -5,13 +5,13 @@ import { Rocket, ArrowRight, ShieldCheck } from 'lucide-react';
 
 const FinalCTA: React.FC = () => {
   return (
-   <div className="main p-4">
+   <div className="main md:p-4 p-2">
      <section className="py-20 rounded-3xl bg-red-600 relative overflow-hidden">
       {/* Abstract Background Shapes */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-red-500 rounded-full blur-[100px] opacity-30" />
       <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-red-400 rounded-full blur-[100px] opacity-20" />
 
-      <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
+      <div className="md:max-w-5xl md:mx-auto md:px-4 p-2 text-center relative z-10">
         <motion.div 
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -20,12 +20,12 @@ const FinalCTA: React.FC = () => {
           <Rocket className="w-10 h-10 animate-bounce" />
         </motion.div>
         
-        <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tight">
+        <h2 className="text-3xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tight">
           Ready to become a <br />
           <span className="text-red-200 italic">Master Forex Trader?</span>
         </h2>
         
-        <p className="text-red-100 text-xl font-medium mb-12 max-w-2xl mx-auto opacity-90">
+        <p className="text-red-100 md:text-xl text-sm font-medium mb-12 max-w-2xl mx-auto opacity-90">
           Join 10,000+ students worldwide who have decoded the markets. Your journey to financial freedom starts with a single step.
         </p>
 
@@ -33,7 +33,7 @@ const FinalCTA: React.FC = () => {
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto px-10 py-5 bg-white text-red-600 font-black rounded-2xl hover:bg-slate-50 transition-all shadow-2xl flex items-center justify-center gap-3 tracking-wide"
+            className="w-full sm:w-auto md:px-10 md:py-5 py-2 md:text-base text-xs bg-white text-red-600 font-black rounded-2xl hover:bg-slate-50 transition-all shadow-2xl flex items-center justify-center gap-3 tracking-wide"
           >
             CLAIM YOUR SPOT NOW
             <ArrowRight className="w-5 h-5" />

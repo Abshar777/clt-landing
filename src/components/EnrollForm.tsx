@@ -98,32 +98,32 @@ export const EnrollForm: React.FC = () => {
   };
   return (
     <section id="enroll" className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative bg-white rounded-[3.5rem] shadow-2xl overflow-hidden border border-slate-200">
+      <div className="md:max-w-7xl md:mx-auto px-2 sm:px-2 lg:px-8">
+        <div className="relative bg-white md:rounded-[3.5rem] rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
           <div className="grid lg:grid-cols-2">
-            <div className="p-12 lg:p-20 space-y-8">
+            <div className="md:p-12 p-4 lg:p-20 space-y-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-white rounded-full text-[10px] font-bold uppercase tracking-widest">
                 Immediate Entry
               </div>
-              <h2 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+              <h2 className="text-3xl lg:text-5xl font-black text-slate-900 tracking-tight">
                 Ready to Begin?
               </h2>
-              <p className="text-slate-500 font-medium text-lg leading-relaxed">
+              <p className="text-slate-500 font-medium md:text-lg text-sm leading-relaxed">
                 If you’re serious about mastering trading—not just dabbing—CLT
                 Trading Academy gives you the roadmap, skills, and support you
                 need.
               </p>
 
               <div className="space-y-6">
-                <div className="flex items-center gap-4 p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-red-600 transition-colors">
+                <div className="flex items-center gap-4 md:p-6 p-2 bg-slate-50 rounded-3xl border border-slate-100 hover:border-red-600 transition-colors">
                   <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-red-600">
                     <Wallet size={24} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900">
+                    <h4 className="font-bold md:text-base text-xs text-slate-900">
                       Free Educational Account
                     </h4>
-                    <p className="text-sm text-slate-500 font-medium">
+                    <p className="md:text-sm text-xs text-slate-500 font-medium">
                       Start trading with our capital on us.
                     </p>
                   </div>
@@ -131,7 +131,7 @@ export const EnrollForm: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-black p-12 lg:p-20 relative">
+            <div className="bg-black md:p-12 p-6 lg:p-20 relative">
               <div className="absolute top-0 right-0 w-64 h-64 bg-red-600/20 blur-[100px] rounded-full"></div>
               <div className="relative z-10 space-y-8">
                 <h3 className="text-2xl font-black text-white">
@@ -184,7 +184,7 @@ export const EnrollForm: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isLoading || !isValidPhone}
-                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed bg-red-600 text-white py-5 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all flex items-center justify-center gap-3 shadow-xl"
+                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed bg-red-600 text-white py-5 rounded-2xl font-bold md:text-lg text-xs hover:bg-red-700 transition-all flex items-center justify-center gap-3 shadow-xl"
                   >
                     {isLoading ? (
                       <div className="flex items-center justify-center gap-2">
@@ -202,7 +202,7 @@ export const EnrollForm: React.FC = () => {
                 </form>
 
                 <div className="pt-10 border-t border-white/10">
-                  <button className="w-full bg-white/5 border border-white/20 text-white py-4 rounded-2xl font-bold hover:bg-white/10 transition-all">
+                  <button className="w-full bg-white/5 md:text-base text-xs border border-white/20 text-white py-4 rounded-2xl font-bold hover:bg-white/10 transition-all">
                     Talk to a Mentor
                   </button>
                 </div>

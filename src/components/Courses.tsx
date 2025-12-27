@@ -37,7 +37,7 @@ export const Courses: React.FC = () => {
 
         <div className="grid lg:grid-cols-2 gap-10">
           {/* 1. Trade Craft – Beginner */}
-          <div className="course-reveal group relative p-10 bg-slate-50 rounded-[3rem] border border-slate-200 overflow-hidden hover:border-red-600 transition-all duration-500 shadow-xl">
+          <div className="course-reveal group relative md:p-10 p-6 bg-slate-50 md:rounded-[3rem] rounded-2xl border border-slate-200 overflow-hidden hover:border-red-600 transition-all duration-500 shadow-xl">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
               <Zap size={120} className="text-slate-900" />
             </div>
@@ -85,7 +85,7 @@ export const Courses: React.FC = () => {
           </div>
 
           {/* 2. Profit Matrix – Intermediate */}
-          <div className="course-reveal group relative p-10 bg-black text-white rounded-[3rem] border border-slate-800 overflow-hidden shadow-2xl">
+          <div className="course-reveal group relative md:p-10 p-6 bg-black text-white md:rounded-[3rem] rounded-2xl border border-slate-800 overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
               <Crown size={120} className="text-white" />
             </div>
@@ -130,7 +130,7 @@ export const Courses: React.FC = () => {
               Execute Perfectly with Profit Matrix
             </button>
           </div>
-          <div className="course-reveal group relative p-10 bg-black text-white rounded-[3rem] border border-slate-800 overflow-hidden shadow-2xl">
+          <div className="course-reveal group relative md:p-10 p-6 bg-black text-white md:rounded-[3rem] rounded-2xl border border-slate-800 overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
               <Crown size={120} className="text-white" />
             </div>
@@ -176,7 +176,7 @@ export const Courses: React.FC = () => {
             </button>
           </div>
           {/* 3. Market Code – Advanced */}
-          <div className="course-reveal group relative p-10 bg-slate-50 rounded-[3rem] border border-slate-200 overflow-hidden shadow-xl">
+          <div className="course-reveal group relative md:p-10 p-6 bg-slate-50 md:rounded-[3rem] rounded-2xl border border-slate-200 overflow-hidden shadow-xl">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
               <Zap size={120} className="text-slate-900" />
             </div>

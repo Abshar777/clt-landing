@@ -44,7 +44,7 @@ export const Philosophy: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex-1 grid grid-cols-2 gap-6">
+          <div className="flex-1 md:grid hidden grid-cols-2 gap-6">
             {pillars.map((p, idx) => (
               <div
                 key={idx}

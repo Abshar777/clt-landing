@@ -49,7 +49,7 @@ const AwardsSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
               whileHover={{ y: -5 }}
-              className="relative group p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:border-red-600/30 hover:bg-white hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300 text-center"
+              className="relative group md:p-6 p-4 md:rounded-3xl rounded-2xl bg-slate-50 border border-slate-100 hover:border-red-600/30 hover:bg-white hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300 text-center"
             >
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center overflow-hidden text-red-600 mx-auto mb-4 shadow-sm group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
                 <Image

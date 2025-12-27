@@ -22,13 +22,13 @@ import RodmapV2 from "../components/roadmap/index";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="w-screen overflow-x-hidden">
       <WhatsappButton />
       <Hero />
       <Counter />
       <VideoTestimonials />
       <WhyCLT />
-      <RodmapV2 />
+      {/* <RodmapV2 /> */}
       <OurTeam />
       <Courses />
       <ProfitResults />

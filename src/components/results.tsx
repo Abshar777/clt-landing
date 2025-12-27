@@ -74,7 +74,7 @@ const ProfitResults: React.FC = () => {
           ))}
         </Swiper> */}
 
-        <div className="grid w-4xl mx-auto  md:grid-cols-3 gap-8">
+        <div className="grid md:w-4xl w-full md:mx-auto grid-cols-2  md:grid-cols-3 gap-2  md:gap-8">
           {/* Image Wrapper */}
           {PROFIT_SCREENSHOTS.slice(0, 6).map((member, index) => (
             <div className="relative image-anime bg-transparent rounded-xl overflow-hidden group">
