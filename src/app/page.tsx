@@ -28,7 +28,7 @@ export default function Home() {
       <Counter />
       <VideoTestimonials />
       <WhyCLT />
-      {/* <RodmapV2 /> */}
+      <RodmapV2 />
       <OurTeam />
       <Courses />
       <ProfitResults />
