@@ -39,7 +39,7 @@ export const Counter: React.FC = () => {
   ];
 
   return (
-    <div className="w-full px-4 flex items-center justify-center" ref={containerRef}>
+    <div className="w-full mt-10 px-4 flex items-center justify-center" ref={containerRef}>
       <div className="relative w-full overflow-hidden">
         {/* Modern Background Decorations */}
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2"></div>

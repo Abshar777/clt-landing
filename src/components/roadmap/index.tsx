@@ -15,7 +15,7 @@ const RodmapV2 = () => {
     restDelta: 0.001,
   });
   return (
-    <div className="relative">
+    <div className="relative mb-20">
       <div className="max-w-7xl   mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 md:pt-24">
         <div className="absolute  top-0 left-0 w-full h-full pointer-events-none z-0 opacity-10">
           <svg

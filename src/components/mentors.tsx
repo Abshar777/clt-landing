@@ -12,6 +12,8 @@ import t20 from "@/../public/t20.png";
 import t20_1 from "@/../public/t20-1.png";
 import t19 from "@/../public/t19.png";
 import t45 from "@/../public/t45.jpeg";
+import { motion } from "framer-motion";
+import { TrendingUp, Users } from "lucide-react";
 
 // Nihal Azhikodan
 
@@ -126,18 +128,25 @@ export const teamMembers = [
 ];
 export default function OurTeam() {
   return (
-    <div className="md:py-10 py-6 bg-slate-50">
+    <div className="md:py-10 mt-20  py-6 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Title */}
+
         <div className="text-center mb-14 flex flex-col items-center justify-center ">
-          <div className="px-5 rounded-full mb-2 border border-primary text-primary font-semibold w-fit text-center py-2">
-            <p className="md:text-sm text-xs uppercase text-nowrap">
-              CLT ACADEMY Mentors
-            </p>
-          </div>
-          <h1 className="md:text-5xl text-4xl text-center md:text-start text-black/90 font-bold">
-            Collaboration at the core of innovation
-          </h1>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-50 text-green-600 rounded-full text-xs font-black uppercase tracking-widest mb-4"
+          >
+            <Users className="w-4 h-4" /> CLT ACADEMY Mentors
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-black capitalize text-slate-900 tracking-tight">
+            Collaboration at <span className="text-red-600   ">the core</span> of
+            innovation
+          </h2>
+          <p className="text-slate-500 font-medium">
+            Our mentors are here to guide you every step of the way.
+          </p>
         </div>
 
         {/* Swiper Slider */}
@@ -189,7 +198,10 @@ export default function OurTeam() {
                     {member.name}
                   </h3>
 
-                  <p className="text-xs text-center text-white/80"> {member.det}</p>
+                  <p className="text-xs text-center text-white/80">
+                    {" "}
+                    {member.det}
+                  </p>
                 </div>
               </div>
             </SwiperSlide>
