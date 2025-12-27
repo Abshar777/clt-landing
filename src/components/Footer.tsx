@@ -122,7 +122,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="pt-10 pb-10  border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">
             &copy; 2024 CLT Trading Academy. All Rights Reserved.
           </p>
