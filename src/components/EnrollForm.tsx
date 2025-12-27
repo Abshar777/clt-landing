@@ -13,14 +13,19 @@ export const EnrollForm: React.FC = () => {
     message: "",
   });
 
-  const [countryCode, setCountryCode] = useState("AE");
+  const [callingCode, setCallingCode] = useState("+971");
+  const [phoneCodeLoading, setPhoneCodeLoading] = useState(true);
+
   useEffect(() => {
-    console.log("country", countryCode);
-    detectCountry().then((country) => {
-      setCountryCode(country as CountryCode);
-      console.log("country2", country);
-      formData.phone = country;
-    });
+    detectCountry()
+      .then((code) => {
+        setCallingCode(code);
+        setFormData((prev) => ({ ...prev, phone: code }));
+        setPhoneCodeLoading(false);
+      })
+      .catch(() => {
+        setPhoneCodeLoading(false);
+      });
   }, []);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -36,28 +41,24 @@ export const EnrollForm: React.FC = () => {
   };
 
   const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const value = e.target.value;
+    let value = e.target.value;
 
-      try {
-        const phoneNumber = parsePhoneNumberFromString(
-          value,
-          countryCode as CountryCode
-        );
+    // Remove non-digits
+    let digits = value.replace(/\D/g, "");
 
-        if (phoneNumber) {
-          setFormData({
-            ...formData,
-            phone: phoneNumber.formatInternational(),
-          });
-          setIsValidPhone(phoneNumber.isValid());
-        } else {
-          setIsValidPhone(false);
-        }
-      } catch {
-        setIsValidPhone(false);
-      }
-    };
+    // Remove country code digits if user pastes full number
+    const ccDigits = callingCode.replace("+", "");
+    if (digits.startsWith(ccDigits)) {
+      digits = digits.slice(ccDigits.length);
+    }
+
+    // Limit length (UAE = 9 digits)
+    digits = digits.slice(0, 9);
+
+    const formatted = `${callingCode} ${digits}`;
+
+    setFormData((prev) => ({ ...prev, phone: formatted }));
+    setIsValidPhone(digits.length === 9);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -80,7 +81,7 @@ export const EnrollForm: React.FC = () => {
         name: "",
         message: "",
         email: "",
-        phone: countryCode,
+        phone: callingCode,
       });
 
       window.open(
@@ -174,15 +175,16 @@ export const EnrollForm: React.FC = () => {
                       value={formData?.phone}
                       onChange={phoneNumberChange}
                       type="tel"
+                      disabled={phoneCodeLoading}
                       name="phone"
                       placeholder="Phone Number"
-                      className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-6 text-white placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
+                      className="w-full disabled:cursor-not-allowed disabled:opacity-50 bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-6 text-white placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
                     />
                   </div>
                   <button
                     type="submit"
                     disabled={isLoading || !isValidPhone}
-                    className="w-full bg-red-600 text-white py-5 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all flex items-center justify-center gap-3 shadow-xl"
+                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed bg-red-600 text-white py-5 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all flex items-center justify-center gap-3 shadow-xl"
                   >
                     {isLoading ? (
                       <div className="flex items-center justify-center gap-2">

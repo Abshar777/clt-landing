@@ -23,44 +23,6 @@ export const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Main text split reveal
-      gsap.from(".reveal-text", {
-        y: 100,
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power4.out",
-      });
-
-      // Floating icons animation
-      gsap.to(".floating-icon", {
-        y: -20,
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        stagger: 0.5,
-        ease: "sine.inOut",
-      });
-
-      // Background parallax
-      gsap.to(".hero-bg-blob", {
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-        y: 200,
-        scale: 1.2,
-        opacity: 0.3,
-      });
-    }, heroRef);
-
-    return () => ctx.revert();
-  }, []);
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -68,14 +30,19 @@ export const Hero: React.FC = () => {
     message: "",
   });
 
-  const [countryCode, setCountryCode] = useState("AE");
+  const [callingCode, setCallingCode] = useState("+971");
+  const [phoneCodeLoading, setPhoneCodeLoading] = useState(true);
+
   useEffect(() => {
-    console.log("country", countryCode);
-    detectCountry().then((country) => {
-      setCountryCode(country as CountryCode);
-      console.log("country2", country);
-      formData.phone = country;
-    });
+    detectCountry()
+      .then((code) => {
+        setCallingCode(code);
+        setFormData((prev) => ({ ...prev, phone: code }));
+        setPhoneCodeLoading(false);
+      })
+      .catch(() => {
+        setPhoneCodeLoading(false);
+      });
   }, []);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -91,28 +58,24 @@ export const Hero: React.FC = () => {
   };
 
   const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const value = e.target.value;
+    let value = e.target.value;
 
-      try {
-        const phoneNumber = parsePhoneNumberFromString(
-          value,
-          countryCode as CountryCode
-        );
+    // Remove non-digits
+    let digits = value.replace(/\D/g, "");
 
-        if (phoneNumber) {
-          setFormData({
-            ...formData,
-            phone: phoneNumber.formatInternational(),
-          });
-          setIsValidPhone(phoneNumber.isValid());
-        } else {
-          setIsValidPhone(false);
-        }
-      } catch {
-        setIsValidPhone(false);
-      }
-    };
+    // Remove country code digits if user pastes full number
+    const ccDigits = callingCode.replace("+", "");
+    if (digits.startsWith(ccDigits)) {
+      digits = digits.slice(ccDigits.length);
+    }
+
+    // Limit length (UAE = 9 digits)
+    digits = digits.slice(0, 10);
+
+    const formatted = `${callingCode} ${digits}`;
+
+    setFormData((prev) => ({ ...prev, phone: formatted }));
+    setIsValidPhone(digits.length === 10 || digits.length === 9);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -135,7 +98,7 @@ export const Hero: React.FC = () => {
         name: "",
         message: "",
         email: "",
-        phone: countryCode,
+        phone: callingCode,
       });
 
       window.open(
@@ -257,8 +220,9 @@ export const Hero: React.FC = () => {
                   value={formData?.email}
                   type="email"
                   name="email"
+                
                   placeholder="Email Address"
-                  className="w-full bg-black/5 border border-black/10 rounded-2xl py-4 pl-12 pr-6 text-black placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
+                  className="w-full  bg-black/5 border border-black/10 rounded-2xl py-4 pl-12 pr-6 text-black placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
                 />
               </div>
               <div className="relative">
@@ -271,14 +235,15 @@ export const Hero: React.FC = () => {
                   value={formData?.phone}
                   type="tel"
                   name="phone"
+                  disabled={phoneCodeLoading}
                   placeholder="Phone Number"
-                  className="w-full bg-black/5 border border-black/10 rounded-2xl py-4 pl-12 pr-6 text-black placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
+                  className="w-full disabled:cursor-not-allowed disabled:opacity-50 bg-black/5 border border-black/10 rounded-2xl py-4 pl-12 pr-6 text-black placeholder-slate-500 focus:outline-none focus:border-red-600 transition-all"
                 />
               </div>
               <button
                 type="submit"
-                disabled={isLoading || !isValidPhone}
-                className="w-full bg-red-600 text-white py-5 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all flex items-center justify-center gap-3 shadow-xl"
+                disabled={isLoading || !isValidPhone || phoneCodeLoading}
+                className="w-full disabled:opacity-50 disabled:cursor-not-allowed bg-red-600 text-white py-5 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all flex items-center justify-center gap-3 shadow-xl"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center gap-2">

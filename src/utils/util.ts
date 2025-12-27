@@ -12,8 +12,8 @@ export function minutesLeftUntilJan30_2026(): number {
     try {
       const res = await fetch("https://ipapi.co/json/");
       const data = await res.json();
-      console.log("data", data?.country_calling_code);
-      return data?.country_calling_code; // e.g. "IN", "AE"
+     
+      return data?.country_calling_code || "+971"; // e.g. "IN", "AE"
     } catch {
       return "+971"; // fallback
     }
