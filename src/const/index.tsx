@@ -96,7 +96,7 @@ export const ROADMAP_STEPS = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: "Alex Johnson",
+    name: "Abdul Aseez",
     role: "Full-time Trader",
     profit: "+$2,400",
     thumbnail: "/1.mp4",
@@ -104,7 +104,7 @@ export const TESTIMONIALS = [
   },
   {
     id: 2,
-    name: "Sarah Miller",
+    name: "Ranjith ",
     role: "Student",
     profit: "+$850",
     thumbnail: "/2.mp4",
@@ -112,7 +112,7 @@ export const TESTIMONIALS = [
   },
   {
     id: 3,
-    name: "David Chen",
+    name: "Jeevan",
     role: "Part-time Trader",
     profit: "+$4,200",
     thumbnail: "/3.mp4",
@@ -120,7 +120,7 @@ export const TESTIMONIALS = [
   },
   {
     id: 4,
-    name: "Elena Rodriguez",
+    name: "Abdul Aseez",
     role: "Entrepreneur",
     profit: "+$1,150",
     thumbnail: "/1.mp4",

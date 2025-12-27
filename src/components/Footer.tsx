@@ -138,6 +138,12 @@ export const Footer: React.FC = () => {
             </a>
           </div>
         </div>
+        <div className="pt-10 border-t border-slate-100 flex justify-center items-center gap-6">
+          <p className="text-xs text-center text-slate-400 font-bold uppercase tracking-widest">
+            <b>warning:</b> The information provided on this website and within our educational programs, courses, workshops, and materials is for educational and informational purposes only. It is not intended to be, and does not constitute, financial advice, investment recommendations, or an invitation to buy or sell any financial instrument.
+          </p>
+         
+        </div>
       </div>
     </footer>
   );

@@ -33,7 +33,7 @@ export default function Home() {
       <Courses />
       <ProfitResults />
       <AwardsSection />
-      <Videosection />
+      {/* <Videosection /> */}
 
       <Philosophy />
       <Testimonials />
