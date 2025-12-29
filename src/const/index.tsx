@@ -103,7 +103,7 @@ export const TESTIMONIALS = [
     quote: "CLT Academy changed my perspective on risk management. I'm now consistently profitable."
   },
   {
-    id: 2,
+    id:     2,
     name: "Ranjith ",
     role: "Student",
     profit: "+$850",
@@ -241,14 +241,14 @@ export const AWARDS = [
     icon: <Shield className="w-8 h-8" />,
     image: a2,
   },
-  {
-    id: 3,
-    title: "Annual Industry Awards",
-    year: "2025",
-    org: "MEA Finance",
-    icon: <Trophy className="w-8 h-8" />,
-    image: a3,
-  },
+  // {
+  //   id: 3,
+  //   title: "Annual Industry Awards",
+  //   year: "2025",
+  //   org: "MEA Finance",
+  //   icon: <Trophy className="w-8 h-8" />,
+  //   image: a3,
+  // },
   {
     id: 4,
     title: "Gulf Finance Focus",
@@ -273,38 +273,38 @@ export const AWARDS = [
     icon: <Globe className="w-8 h-8" />,
     image: a6,
   },
-  {
-    id: 7,
-    title: "Leaders in Fintech",
-    year: "2025",
-    org: "Innovation Awards",
-    icon: <Zap className="w-8 h-8" />,
-    image: a7,
-  },
-  {
-    id: 8,
-    title: "Middle East Blockchain",
-    year: "2025",
-    org: "MEBA Awards",
-    icon: <Binary className="w-8 h-8" />,
-    image: a8,
-  },
-  {
-    id: 9,
-    title: "Banking Tech Summit",
-    year: "2025",
-    org: "MEA Finance",
-    icon: <Cpu className="w-8 h-8" />,
-    image: a9,
-  },
-  {
-    id: 10,
-    title: "Finance Middle East",
-    year: "2025",
-    org: "Annual Excellence Awards",
-    icon: <Briefcase className="w-8 h-8" />,
-    image: a10,
-  }
+  // {
+  //   id: 7,
+  //   title: "Leaders in Fintech",
+  //   year: "2025",
+  //   org: "Innovation Awards",
+  //   icon: <Zap className="w-8 h-8" />,
+  //   image: a7,
+  // },
+  // {
+  //   id: 8,
+  //   title: "Middle East Blockchain",
+  //   year: "2025",
+  //   org: "MEBA Awards",
+  //   icon: <Binary className="w-8 h-8" />,
+  //   image: a8,
+  // },
+  // {
+  //   id: 9,
+  //   title: "Banking Tech Summit",
+  //   year: "2025",
+  //   org: "MEA Finance",
+  //   icon: <Cpu className="w-8 h-8" />,
+  //   image: a9,
+  // },
+  // {
+  //   id: 10,
+  //   title: "Finance Middle East",
+  //   year: "2025",
+  //   org: "Annual Excellence Awards",
+  //   icon: <Briefcase className="w-8 h-8" />,
+  //   image: a10,
+  // }
 ];
 
 
