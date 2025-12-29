@@ -236,7 +236,7 @@ export const AWARDS = [
   {
     id: 2,
     title: "Global Islamic FinTech",
-    year: "2025",
+    year: "2022",
     org: "2nd Global Edition",
     icon: <Shield className="w-8 h-8" />,
     image: a2,
