@@ -36,16 +36,20 @@ import p14 from "@/../public/14.jpeg";
 import p15 from "@/../public/15.jpeg";
 
 
-import a1 from "@/../public/a1.jpeg";
-import a2 from "@/../public/a2.jpeg";
-import a3 from "@/../public/a3.jpeg";
-import a4 from "@/../public/a4.jpeg";
-import a5 from "@/../public/a5.jpeg";
-import a6 from "@/../public/a6.jpeg";
-import a7 from "@/../public/a7.jpeg";
-import a8 from "@/../public/a8.webp";
-import a9 from "@/../public/a9.jpeg";
-import a10 from "@/../public/a10.jpeg";
+
+import a0 from "@/../public/awwards/a0.jpg";
+import a1 from "@/../public/awwards/a1.jpeg";
+import a2 from "@/../public/awwards/a2.jpeg";
+import a3 from "@/../public/awwards/a3.jpeg";
+import a4 from "@/../public/awwards/a4.jpeg";
+import a5 from "@/../public/awwards/a5.jpeg";
+import a6 from "@/../public/awwards/a6.jpeg";
+import a7 from "@/../public/awwards/a7.jpeg";
+import a8 from "@/../public/awwards/a8.jpeg";
+import a9 from "@/../public/awwards/a9.jpeg";
+import a10 from "@/../public/awwards/a10.jpeg";
+
+
 
 
 export const ROADMAP_STEPS = [
@@ -226,10 +230,18 @@ export const PROFIT_SCREENSHOTS = [
 
 export const AWARDS = [
   {
+    id:0,
+    title:"Forex Expo Award ",
+    year:"2025",
+    org:"Master of forex education",
+     icon: <Award className="w-8 h-8" />,
+    image:a0,
+  },
+  {
     id: 1,
     title: "ProFx Awards",
     year: "2024",
-    org: "Professional Forex Excellence",
+    org: "Best Forex Academy",
     icon: <Award className="w-8 h-8" />,
     image: a1,
   },
@@ -237,31 +249,31 @@ export const AWARDS = [
     id: 2,
     title: "Global Islamic FinTech",
     year: "2022",
-    org: "2nd Global Edition",
+    org: "GIFA Market Leadership Award ",
     icon: <Shield className="w-8 h-8" />,
     image: a2,
   },
-  // {
-  //   id: 3,
-  //   title: "Annual Industry Awards",
-  //   year: "2025",
-  //   org: "MEA Finance",
-  //   icon: <Trophy className="w-8 h-8" />,
-  //   image: a3,
-  // },
+  {
+    id: 3,
+    title: "MEA Finance Annual Industry Awards",
+    year: "2024",
+    org: "Best Professional Trading Academy",
+    icon: <Trophy className="w-8 h-8" />,
+    image: a3,
+  },
   {
     id: 4,
     title: "Gulf Finance Focus",
-    year: "2025",
-    org: "Middle East – UAE",
+    year: "2021",
+    org: "Customer service excellence award",
     icon: <Medal className="w-8 h-8" />,
     image: a4,
   },
   {
     id: 5,
-    title: "Finance Focus MEA",
+    title: "Middle East Finance Focus MEA",
     year: "2025",
-    org: "Middle East & Africa Awards",
+    org: "Leading online trading academy",
     icon: <Star className="w-8 h-8" />,
     image: a5,
   },
@@ -269,42 +281,42 @@ export const AWARDS = [
     id: 6,
     title: "iFX EXPO Dubai",
     year: "2024",
-    org: "Global B2B Exhibition",
+    org: "Best Trading Curriculum Design",
     icon: <Globe className="w-8 h-8" />,
     image: a6,
   },
-  // {
-  //   id: 7,
-  //   title: "Leaders in Fintech",
-  //   year: "2025",
-  //   org: "Innovation Awards",
-  //   icon: <Zap className="w-8 h-8" />,
-  //   image: a7,
-  // },
-  // {
-  //   id: 8,
-  //   title: "Middle East Blockchain",
-  //   year: "2025",
-  //   org: "MEBA Awards",
-  //   icon: <Binary className="w-8 h-8" />,
-  //   image: a8,
-  // },
-  // {
-  //   id: 9,
-  //   title: "Banking Tech Summit",
-  //   year: "2025",
-  //   org: "MEA Finance",
-  //   icon: <Cpu className="w-8 h-8" />,
-  //   image: a9,
-  // },
-  // {
-  //   id: 10,
-  //   title: "Finance Middle East",
-  //   year: "2025",
-  //   org: "Annual Excellence Awards",
-  //   icon: <Briefcase className="w-8 h-8" />,
-  //   image: a10,
-  // }
+  {
+    id: 7,
+    title: "Leaders in Fintech",
+    year: "2025",
+    org: "Excellence in Trading Education Award",
+    icon: <Zap className="w-8 h-8" />,
+    image: a7,
+  },
+  {
+    id: 8,
+    title: "Middle East Blockchain",
+    year: "2023",
+    org: "Most Trusted Trading Education Brand",
+    icon: <Binary className="w-8 h-8" />,
+    image: a8,
+  },
+  {
+    id: 9,
+    title: "Banking Tech Summit",
+    year: "2025",
+    org: "Innovation in Trading Education Award",
+    icon: <Cpu className="w-8 h-8" />,
+    image: a9,
+  },
+  {
+    id: 10,
+    title: "Finance Middle East",
+    year: "2023",
+    org: "Leading online trading academy",
+    icon: <Briefcase className="w-8 h-8" />,
+    image: a10,
+  }
 ];
 
 
