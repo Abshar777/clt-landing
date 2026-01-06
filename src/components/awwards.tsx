@@ -7,7 +7,7 @@ import a0 from "@/../public/awwards/a0.jpg";
 
 const AwardsSection: React.FC = () => {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 md:block hidden bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
           <motion.div

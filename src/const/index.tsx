@@ -37,17 +37,17 @@ import p15 from "@/../public/15.jpeg";
 
 
 
-import a0 from "@/../public/awwards/a0.jpg";
-import a1 from "@/../public/awwards/a1.jpeg";
-import a2 from "@/../public/awwards/a2.jpeg";
-import a3 from "@/../public/awwards/a3.jpeg";
-import a4 from "@/../public/awwards/a4.jpeg";
-import a5 from "@/../public/awwards/a5.jpeg";
-import a6 from "@/../public/awwards/a6.jpeg";
-import a7 from "@/../public/awwards/a7.jpeg";
-import a8 from "@/../public/awwards/a8.jpeg";
-import a9 from "@/../public/awwards/a9.jpeg";
-import a10 from "@/../public/awwards/a10.jpeg";
+import a0 from "@/../public/a0.jpg";
+import a1 from "@/../public/a1.jpeg";
+import a2 from "@/../public/a2.jpeg";
+import a3 from "@/../public/a3.jpeg";
+import a4 from "@/../public/a4.jpeg";
+import a5 from "@/../public/a5.jpeg";
+import a6 from "@/../public/a6.jpeg";
+import a7 from "@/../public/a7.jpeg";
+import a8 from "@/../public/a8.jpeg";
+import a9 from "@/../public/a9.jpeg";
+import a10 from "@/../public/a10.jpeg";
 
 
 

@@ -130,6 +130,50 @@ export const Courses: React.FC = () => {
               Execute Perfectly with Profit Matrix
             </button>
           </div>
+          <div className="course-reveal group relative md:p-10 p-6 bg-slate-50 md:rounded-[3rem] rounded-2xl border border-slate-200 overflow-hidden shadow-xl">
+            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
+              <Zap size={120} className="text-slate-900" />
+            </div>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="px-3 py-1 bg-white rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest border">
+                Advanced Level
+              </span>
+              <div className="flex items-center gap-1 text-red-600 font-bold text-xs">
+                <Clock size={14} /> 14-Weeks
+              </div>
+            </div>
+            <h3 className="text-3xl font-black text-slate-900 mb-2">
+              Market Code
+            </h3>
+            <p className="text-red-600 font-bold mb-8 uppercase tracking-tighter">
+              Advanced Trading Course • 14 Weeks
+            </p>
+
+            <ul className="space-y-4 mb-12">
+              {[
+                "Price movement logic",
+                "Institutional-level trading",
+                "Smart Money Concepts (SMC)",
+                "Liquidity manipulation",
+                "High-precision entries",
+                "Risk-to-reward systems",
+                "BOS / CHOCH mapping",
+                "Real-time strategy execution",
+              ].map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-3 text-slate-700 font-semibold text-sm"
+                >
+                  <CheckCircle2 className="text-red-600" size={18} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <button className="w-full py-5 md:translate-y-[4.5rem]    bg-black text-white rounded-2xl font-bold hover:bg-red-600 transition-all shadow-lg text-lg">
+              Master Consistency with Market Code
+            </button>
+          </div>
           <div className="course-reveal group relative md:p-10 p-6 bg-black text-white md:rounded-[3rem] rounded-2xl border border-slate-800 overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
               <Crown size={120} className="text-white" />
@@ -176,50 +220,6 @@ export const Courses: React.FC = () => {
             </button>
           </div>
           {/* 3. Market Code – Advanced */}
-          <div className="course-reveal group relative md:p-10 p-6 bg-slate-50 md:rounded-[3rem] rounded-2xl border border-slate-200 overflow-hidden shadow-xl">
-            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
-              <Zap size={120} className="text-slate-900" />
-            </div>
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-3 py-1 bg-white rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest border">
-                Advanced Level
-              </span>
-              <div className="flex items-center gap-1 text-red-600 font-bold text-xs">
-                <Clock size={14} /> 14-Weeks
-              </div>
-            </div>
-            <h3 className="text-3xl font-black text-slate-900 mb-2">
-              Market Code
-            </h3>
-            <p className="text-red-600 font-bold mb-8 uppercase tracking-tighter">
-              Advanced Trading Course • 14 Weeks
-            </p>
-
-            <ul className="space-y-4 mb-12">
-              {[
-                "Price movement logic",
-                "Institutional-level trading",
-                "Smart Money Concepts (SMC)",
-                "Liquidity manipulation",
-                "High-precision entries",
-                "Risk-to-reward systems",
-                "BOS / CHOCH mapping",
-                "Real-time strategy execution",
-              ].map((item, i) => (
-                <li
-                  key={i}
-                  className="flex items-center gap-3 text-slate-700 font-semibold text-sm"
-                >
-                  <CheckCircle2 className="text-red-600" size={18} />
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <button className="w-full py-5 md:translate-y-[4.5rem]    bg-black text-white rounded-2xl font-bold hover:bg-red-600 transition-all shadow-lg text-lg">
-              Master Consistency with Market Code
-            </button>
-          </div>
 
           {/* 4. CLT Vantage – Expert */}
         </div>
