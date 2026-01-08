@@ -8,6 +8,7 @@ import {
   Search,
   MessageCircle,
 } from "lucide-react";
+import { whatsappRedirect } from "./whatsapp";
 
 const pillars = [
   { icon: <MessageCircle />, title: "Mentorship", value: "Hands-on guidance." },
@@ -38,7 +39,7 @@ export const Philosophy: React.FC = () => {
               move.
             </p>
             <div className="pt-8">
-              <button className="bg-red-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-700 transition-all shadow-xl">
+              <button onClick={whatsappRedirect} className="bg-red-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-700 transition-all shadow-xl">
                 Begin My Transformation
               </button>
             </div>

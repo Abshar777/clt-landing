@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { CheckCircle2, Crown, Zap, Clock } from "lucide-react";
+import { whatsappRedirect } from "./whatsapp";
 
 export const Courses: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -78,7 +79,7 @@ export const Courses: React.FC = () => {
                 ))}
               </ul>
 
-              <button className="w-full py-5  left-0 md:translate-y-[6.5rem]    bg-white text-slate-900 border-2 border-slate-200 rounded-2xl font-bold hover:bg-black hover:text-white transition-all shadow-lg text-lg">
+              <button onClick={whatsappRedirect} className="w-full py-5  left-0 md:translate-y-[6.5rem]    bg-white text-slate-900 border-2 border-slate-200 rounded-2xl font-bold hover:bg-black hover:text-white transition-all shadow-lg text-lg">
                 Start with Traders Craft
               </button>
             </div>
@@ -126,7 +127,7 @@ export const Courses: React.FC = () => {
               ))}
             </ul>
 
-            <button className="w-full py-5 bg-red-600 rounded-2xl font-bold hover:bg-red-700 transition-all shadow-xl text-lg">
+            <button onClick={whatsappRedirect} className="w-full py-5 bg-red-600 rounded-2xl font-bold hover:bg-red-700 transition-all shadow-xl text-lg">
               Execute Perfectly with Profit Matrix
             </button>
           </div>
@@ -170,7 +171,7 @@ export const Courses: React.FC = () => {
               ))}
             </ul>
 
-            <button className="w-full py-5 md:translate-y-[4.5rem]    bg-black text-white rounded-2xl font-bold hover:bg-red-600 transition-all shadow-lg text-lg">
+            <button onClick={whatsappRedirect} className="w-full py-5 md:translate-y-[4.5rem]    bg-black text-white rounded-2xl font-bold hover:bg-red-600 transition-all shadow-lg text-lg">
               Master Consistency with Market Code
             </button>
           </div>
@@ -215,7 +216,7 @@ export const Courses: React.FC = () => {
               ))}
             </ul>
 
-            <button className="w-full py-5 bg-red-600 rounded-2xl font-bold hover:bg-red-700 transition-all shadow-xl text-lg">
+            <button onClick={whatsappRedirect} className="w-full py-5 bg-red-600 rounded-2xl font-bold hover:bg-red-700 transition-all shadow-xl text-lg">
               Upgrade to CLT Vantage
             </button>
           </div>

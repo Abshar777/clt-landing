@@ -31,12 +31,15 @@ const FinalCTA: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <motion.button 
+          
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="w-full sm:w-auto md:px-10 md:py-5 py-2 md:text-base text-xs bg-white text-red-600 font-black rounded-2xl hover:bg-slate-50 transition-all shadow-2xl flex items-center justify-center gap-3 tracking-wide"
           >
-            CLAIM YOUR SPOT NOW
+            <a href="#enroll" className='flex items-center gap-2'>
+              CLAIM YOUR SPOT NOW
             <ArrowRight className="w-5 h-5" />
+            </a>
           </motion.button>
           
           <div className="flex items-center gap-3 text-white/80 font-bold text-sm">

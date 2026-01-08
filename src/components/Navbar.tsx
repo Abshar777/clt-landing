@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import { CandlestickChart, ArrowUpRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export const Navbar: React.FC = () => {
+  const router=useRouter()
   return (
     <nav className="sticky top-0 w-full z-40  bg-black/5 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,12 +49,14 @@ export const Navbar: React.FC = () => {
               href="#enroll"
               className="hover:text-red-600 transition-colors py-2 "
             >
-              Get Funded
+              Get Educational
             </a>
           </div>
 
           <div className="flex items-center gap-5">
-            <button className="group relative flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-red-600 transition-all duration-300 shadow-xl hover:-translate-y-1">
+            <button onClick={()=>{
+              router.push("#enroll")
+            }} className="group relative flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-red-600 transition-all duration-300 shadow-xl hover:-translate-y-1">
               <a href="#enroll" className="flex items-center justify-center gap-2">
                 Start Journey
                 <ArrowUpRight

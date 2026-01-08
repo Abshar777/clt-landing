@@ -5,6 +5,11 @@ import React from "react";
 
 
 export const whatsappLink = `https://wa.me/${phoneNumber.replace("+", "").replace(" ", "")}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`;
+
+
+export const whatsappRedirect = () => {
+    window.open(whatsappLink, "_blank");
+}
 const WhatsappButton = () => {
   return (
     <>

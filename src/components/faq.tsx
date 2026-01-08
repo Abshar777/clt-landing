@@ -46,7 +46,7 @@ const FAQItem: React.FC<{ question: string, answer: string, index: number }> = (
 
 const FAQ: React.FC = () => {
   return (
-    <section className="py-32 bg-slate-50">
+    <section className="py-6 bg-slate-50">
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-16">
           <motion.div 
@@ -73,7 +73,7 @@ const FAQ: React.FC = () => {
         >
           <p className="text-slate-900 font-bold text-lg mb-2">Still have questions?</p>
           <p className="text-slate-500 mb-6">Our academic counselors are ready to help you 24/7.</p>
-          <button className="text-red-600 font-black flex items-center gap-2 mx-auto hover:gap-4 transition-all">
+          <button onClick={whatsappRedirect} className="text-red-600 font-black flex items-center gap-2 mx-auto hover:gap-4 transition-all">
             Chat with an expert <ArrowRight className="w-5 h-5" />
           </button>
         </motion.div>
@@ -83,4 +83,5 @@ const FAQ: React.FC = () => {
 };
 
 import { ArrowRight } from 'lucide-react';
+import { whatsappRedirect } from './whatsapp';
 export default FAQ;
