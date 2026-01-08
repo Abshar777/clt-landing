@@ -86,7 +86,7 @@ export const Footer: React.FC = () => {
                   href="mailto:support@cltacademy.com"
                   className="text-red-600 underline"
                 >
-                  support@cltacademy.com
+                  info@clt-academy.com
                 </a>
               </li>
               <li>
