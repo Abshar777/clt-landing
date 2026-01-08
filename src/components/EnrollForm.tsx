@@ -5,6 +5,7 @@ import { CountryCode, parsePhoneNumberFromString } from "libphonenumber-js";
 import { toast } from "sonner";
 import { phoneNumber } from "@/const";
 import { detectCountry } from "@/utils/util";
+import { whatsappRedirect } from "./whatsapp";
 export const EnrollForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -202,7 +203,7 @@ export const EnrollForm: React.FC = () => {
                 </form>
 
                 <div className="pt-10 border-t border-white/10">
-                  <button className="w-full bg-white/5 md:text-base text-xs border border-white/20 text-white py-4 rounded-2xl font-bold hover:bg-white/10 transition-all">
+                  <button onClick={whatsappRedirect} className="w-full bg-white/5 md:text-base text-xs border border-white/20 text-white py-4 rounded-2xl font-bold hover:bg-white/10 transition-all">
                     Talk to a Mentor
                   </button>
                 </div>
