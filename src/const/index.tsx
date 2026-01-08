@@ -48,6 +48,7 @@ import a7 from "@/../public/a7.jpeg";
 import a8 from "@/../public/a8.jpeg";
 import a9 from "@/../public/a9.jpeg";
 import a10 from "@/../public/a10.jpeg";
+import a11 from "@/../public/a11.jpeg";
 
 
 
@@ -245,7 +246,7 @@ export const AWARDS = [
     year: "2025",
     org: "Leading online trading academy",
     icon: <Star className="w-8 h-8" />,
-    image: a5,
+    image: a10,
   },
   {
     id: 1,
@@ -283,11 +284,11 @@ export const AWARDS = [
   
   {
     id: 10,
-    title: "Finance Middle East",
-    year: "2023",
+    title: "Future Blockchain Summit",
+    year: "2025",
     org: "Leading online trading academy",
     icon: <Briefcase className="w-8 h-8" />,
-    image: a10,
+    image: a11,
   }
 ];
 
