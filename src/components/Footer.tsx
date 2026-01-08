@@ -15,11 +15,11 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-auto h-14 p-4  rounded-xl flex items-center justify-center text-white group-hover:bg-red-600 transition-all duration-500 transform group-hover:rotate-6">
+              <div className="w-auto h-24 p-4  rounded-xl flex items-center justify-center text-white group-hover:bg-red-600 transition-all duration-500 transform group-hover:rotate-6">
                 <img
                   src="/logo-black.png"
                   alt="CLT Logo"
-                  className="w-auto drop-shadow-lg h-18"
+                  className="w-auto drop-shadow-lg h-24"
                 />
               </div>
               {/* <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase">CLT Academy</span> */}
