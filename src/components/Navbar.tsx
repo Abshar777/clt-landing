@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
               href="#enroll"
               className="hover:text-red-600 transition-colors py-2 "
             >
-              Get Educational
+              Get Educational Account
             </a>
           </div>
 
