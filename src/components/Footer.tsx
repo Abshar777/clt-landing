@@ -56,22 +56,22 @@ export const Footer: React.FC = () => {
             <h4 className="font-bold text-slate-900 mb-6">Programs</h4>
             <ul className="space-y-4 text-slate-500 font-medium text-sm">
               <li>
-                <a href="#" className="hover:text-red-600 transition-colors">
+                <a href="#courses" className="hover:text-red-600 transition-colors">
                 Trade Craft
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-600 transition-colors">
+                <a href="#courses" className="hover:text-red-600 transition-colors">
                  Profit Matrix
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-600 transition-colors">
+                <a href="#courses" className="hover:text-red-600 transition-colors">
                  Market Code
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-600 transition-colors">
+                <a href="#courses" className="hover:text-red-600 transition-colors">
                  CLT Vantage
                 </a>
               </li>
