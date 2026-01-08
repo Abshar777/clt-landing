@@ -228,6 +228,7 @@ export const PROFIT_SCREENSHOTS = [
 ];
 
 
+
 export const AWARDS = [
   
   {
@@ -249,7 +250,7 @@ export const AWARDS = [
   {
     id: 1,
     title: "ProFx Awards",
-    year: "2024",
+    year: "2025",
     org: "Best Forex Academy",
     icon: <Award className="w-8 h-8" />,
     image: a1,
@@ -265,14 +266,14 @@ export const AWARDS = [
   {
     id: 8,
     title: "Middle East Blockchain",
-    year: "2023",
+    year: "2025",
     org: "Most Trusted Trading Education Brand",
     icon: <Binary className="w-8 h-8" />,
     image: a8,
   },
   {
     id: 9,
-    title: "Banking Tech Summit",
+    title: "DIFC Innovation hub awards",
     year: "2025",
     org: "Innovation in Trading Education Award",
     icon: <Cpu className="w-8 h-8" />,
@@ -289,6 +290,7 @@ export const AWARDS = [
     image: a10,
   }
 ];
+
 
 
 export const phoneNumber = "+971557454523";
