@@ -33,24 +33,20 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-slate-900 mb-6">Academy</h4>
             <ul className="space-y-4 text-slate-500 font-medium text-sm">
+              
               <li>
-                <a href="#" className="hover:text-red-600 transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-red-600 transition-colors">
+                <a href="#why-clt" className="hover:text-red-600 transition-colors">
                   Why CLT
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-600 transition-colors">
-                  Mentor Notes
+                <a  href="#testimonials" className="hover:text-red-600 transition-colors">
+               Programs
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-600 transition-colors">
-                  Student Reviews
+                <a href="#enroll" className="hover:text-red-600 transition-colors">
+                 Get Educational Account
                 </a>
               </li>
             </ul>
