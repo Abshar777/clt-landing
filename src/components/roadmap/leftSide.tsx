@@ -1,9 +1,11 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Play, Clock, Share2, Bookmark, Users, Star } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Play, Clock, Share2, Bookmark, Users, Star, X } from "lucide-react";
 
-const LeftSection: React.FC = () => {
+const LeftSection = ({OnClick}: {OnClick: () => void}) => {
+   
   return (
+   
     <div className="space-y-8">
       <div className="space-y-4">
         <motion.div
@@ -53,12 +55,14 @@ const LeftSection: React.FC = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3 }}
+        onClick={() => OnClick()}
         className="relative group rounded-3xl overflow-hidden shadow-2xl bg-slate-900 aspect-video flex items-center justify-center border-4 border-white"
       >
         <video
           src="/l.mp4"
           autoPlay
           muted
+
           loop
           playsInline
           controls={false}
@@ -114,7 +118,10 @@ const LeftSection: React.FC = () => {
           </div>
         </div>
       </div>
+       
     </div>
+   
+
   );
 };
 
