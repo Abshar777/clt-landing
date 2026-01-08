@@ -17,9 +17,9 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="w-auto h-14 p-4  rounded-xl flex items-center justify-center text-white group-hover:bg-red-600 transition-all duration-500 transform group-hover:rotate-6">
                 <img
-                  src="/logo.png"
+                  src="/logo-black.png"
                   alt="CLT Logo"
-                  className="w-auto drop-shadow-lg h-14"
+                  className="w-auto drop-shadow-lg h-18"
                 />
               </div>
               {/* <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase">CLT Academy</span> */}

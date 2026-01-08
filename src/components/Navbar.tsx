@@ -13,9 +13,9 @@ export const Navbar: React.FC = () => {
             <div className="relative">
               <div className="w-auto h-14 p-4  rounded-xl flex items-center justify-center text-white group-hover:bg-red-600 transition-all duration-500 transform group-hover:rotate-6">
                 <img
-                  src="/logo.png"
+                  src="/logo-black.png"
                   alt="CLT Logo"
-                  className="w-auto drop-shadow-lg h-14"
+                  className="w-auto drop-shadow-lg h-18"
                 />
               </div>
               {/* <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-600 rounded-full border-2 border-white animate-ping"></div> */}
