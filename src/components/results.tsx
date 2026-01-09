@@ -86,6 +86,7 @@ const ProfitResults: React.FC = () => {
                   width={500}
                   height={500}
                   placeholder="blur"
+                  loading="lazy"
                   src={member}
                   alt="Profit Screenshot"
                   className="w-full max-h-[400px] object-cover rounded-2xl transform transition duration-500 group-hover:scale-110"

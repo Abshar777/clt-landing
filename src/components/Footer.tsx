@@ -7,6 +7,8 @@ import {
   Linkedin,
 } from "lucide-react";
 import { phoneNumber } from "@/const";
+import Image from "next/image";
+import logo from "@/../public/logo-black.png"
 
 export const Footer: React.FC = () => {
   return (
@@ -15,11 +17,14 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-auto h-24 p-4  rounded-xl flex items-center justify-center text-white group-hover:bg-red-600 transition-all duration-500 transform group-hover:rotate-6">
-                <img
-                  src="/logo-black.png"
+               <div className="w-auto h-24 p-4  rounded-xl flex items-center justify-center text-white group-hover:bg-red-600 transition-all duration-500 transform group-hover:rotate-6">
+                <Image
+                  src={logo}
+                  loading="lazy"
                   alt="CLT Logo"
                   className="w-auto drop-shadow-lg h-24"
+                  width={500}
+                  height={500}
                 />
               </div>
               {/* <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase">CLT Academy</span> */}

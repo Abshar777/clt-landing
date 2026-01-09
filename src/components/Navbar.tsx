@@ -2,6 +2,8 @@
 import React from "react";
 import { CandlestickChart, ArrowUpRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import logo from "@/../public/logo-black.png"
 
 export const Navbar: React.FC = () => {
   const router=useRouter()
@@ -12,10 +14,13 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center gap-3 group cursor-pointer">
             <div className="relative">
               <div className="w-auto h-24 p-4  rounded-xl flex items-center justify-center text-white group-hover:bg-red-600 transition-all duration-500 transform group-hover:rotate-6">
-                <img
-                  src="/logo-black.png"
+                <Image
+                  src={logo}
+                  loading="lazy"
                   alt="CLT Logo"
                   className="w-auto drop-shadow-lg h-24"
+                  width={500}
+                  height={500}
                 />
               </div>
               {/* <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-600 rounded-full border-2 border-white animate-ping"></div> */}

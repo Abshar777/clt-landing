@@ -25,96 +25,6 @@ export const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "+971",
-    message: "",
-  });
-
-  const [callingCode, setCallingCode] = useState("+971");
-  const [phoneCodeLoading, setPhoneCodeLoading] = useState(true);
-
-  useEffect(() => {
-    detectCountry()
-      .then((code) => {
-        setCallingCode(code);
-        setFormData((prev) => ({ ...prev, phone: code }));
-        setPhoneCodeLoading(false);
-      })
-      .catch(() => {
-        setPhoneCodeLoading(false);
-      });
-  }, []);
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [isValidPhone, setIsValidPhone] = useState(false);
-
-  const url =
-    "https://script.google.com/macros/s/AKfycbw-uyPiyPDttDCasddkRP4-tTD2vqTQivU6MLnUU80g-r6Tsx3P8sVWiX6Zzrgj1zp2/exec";
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const phoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value;
-
-    // Remove non-digits
-    let digits = value.replace(/\D/g, "");
-
-    // Remove country code digits if user pastes full number
-    const ccDigits = callingCode.replace("+", "");
-    if (digits.startsWith(ccDigits)) {
-      digits = digits.slice(ccDigits.length);
-    }
-
-    // Limit length (UAE = 9 digits)
-    digits = digits.slice(0, 10);
-
-    const formatted = `${callingCode} ${digits}`;
-
-    setFormData((prev) => ({ ...prev, phone: formatted }));
-    setIsValidPhone(digits.length === 10 || digits.length === 9);
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    try {
-      await fetch(url, {
-        method: "POST",
-        body: JSON.stringify({
-          Name: formData?.name,
-          Email: formData?.email,
-          PhoneNumber: " " + formData?.phone + "_",
-          Message: " ",
-        }),
-      });
-
-      toast.success("Message sent successfully");
-      setFormData({
-        name: "",
-        message: "",
-        email: "",
-        phone: callingCode,
-      });
-
-      window.open(
-        `https://wa.me/${phoneNumber.replace("+", "").replace(" ", "")}?text=${
-          formData?.name
-        } \n ${formData?.email} \n${formData?.phone} \n${formData?.message}`
-      );
-    } catch (error) {
-      console.error(error);
-      toast.error("Message send failed");
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   return (
     <>
@@ -127,6 +37,7 @@ export const Hero: React.FC = () => {
             width={1000}
             height={1000}
             src={heroImage}
+            loading="lazy"
             placeholder="blur"
             alt="hero-bg"
             className="w-[95%] h-full bg-black rounded-3xl opacity-20 object-cover"

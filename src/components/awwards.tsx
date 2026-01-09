@@ -74,6 +74,7 @@ const AwardsSection: React.FC = () => {
                   placeholder="blur"
                   height={500}
                   src={award.image}
+                  loading="lazy"
                   alt={award.title}
                   width={500}
                   className="object-cover absolute inset-0 w-full h-full"
@@ -105,6 +106,7 @@ const AwardsSection: React.FC = () => {
                     <Image
                       placeholder="blur"
                       height={500}
+                      loading="lazy"
                       src={award.image}
                       alt={award.title}
                       width={500}
