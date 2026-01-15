@@ -15,7 +15,8 @@ const WhatsappButton = () => {
     <>
       <a
         href={whatsappLink}
-        className="align-items-center"
+        data-click="whatsapp"
+        className="align-items-center whatsapp"
         style={{
           display: "flex",
           position: "fixed",

@@ -39,7 +39,11 @@ export const Philosophy: React.FC = () => {
               move.
             </p>
             <div className="pt-8">
-              <button onClick={whatsappRedirect} className="bg-red-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-700 transition-all shadow-xl">
+              <button
+                data-click="whatsapp"
+                onClick={whatsappRedirect}
+                className=" whatsapp  bg-red-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-700 transition-all shadow-xl"
+              >
                 Begin My Transformation
               </button>
             </div>
@@ -52,7 +56,9 @@ export const Philosophy: React.FC = () => {
                 className="p-6 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/10 transition-all"
               >
                 <div className="text-red-600 mb-4">
-                  {React.cloneElement(p.icon as React.ReactElement, { size: 24 })}
+                  {React.cloneElement(p.icon as React.ReactElement, {
+                    size: 24,
+                  })}
                 </div>
                 <h4 className="font-bold text-lg mb-1">{p.title}</h4>
                 <p className="text-xs text-slate-500 font-bold uppercase tracking-widest">
