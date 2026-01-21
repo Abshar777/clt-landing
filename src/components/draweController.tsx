@@ -8,8 +8,9 @@ const DraweController = () => {
   useEffect(() => {
     // Automatically trigger the popup after 10 seconds
     const timer = setTimeout(() => {
+      console.log("openDrawer");
       openDrawer();
-    }, 10000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [openDrawer]);
