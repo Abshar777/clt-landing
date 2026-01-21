@@ -19,10 +19,13 @@ import Videosection from "@/components/videosection";
 import FullRoadmap from "@/components/fullRoadmap";
 import { Counter } from "@/components/counter";
 import RodmapV2 from "../components/roadmap/index";
+import { VaultDrawer } from "@/components/applyDrawer";
+import DraweController from "@/components/draweController";
 
 export default function Home() {
   return (
     <main className="w-screen overflow-x-hidden">
+      <DraweController/>
       <WhatsappButton />
       <Hero />
       <Counter />
@@ -32,6 +35,7 @@ export default function Home() {
       <OurTeam />
       <Courses />
       <ProfitResults />
+      <VaultDrawer/>
       <AwardsSection />
       {/* <Videosection /> */}
 

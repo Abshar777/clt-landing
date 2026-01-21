@@ -18,3 +18,6 @@ export function minutesLeftUntilJan30_2026(): number {
       return "+971"; // fallback
     }
   };
+
+
+
