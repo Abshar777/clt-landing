@@ -85,11 +85,11 @@ export const EnrollForm: React.FC = () => {
         phone: callingCode,
       });
 
-      window.open(
-        `https://wa.me/${phoneNumber.replace("+", "").replace(" ", "")}?text=${
-          formData?.name
-        } \n ${formData?.email} \n${formData?.phone} \n${formData?.message}`
-      );
+      // window.open(
+      //   `https://wa.me/${phoneNumber.replace("+", "").replace(" ", "")}?text=${
+      //     formData?.name
+      //   } \n ${formData?.email} \n${formData?.phone} \n${formData?.message}`
+      // );
     } catch (error) {
       console.error(error);
       toast.error("Message send failed");

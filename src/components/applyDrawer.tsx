@@ -96,7 +96,7 @@ export const VaultDrawer: React.FC = () => {
       const waNumber = PLATFORM_WHATSAPP.replace("+", "").replace(/\s/g, "");
       const message = encodeURIComponent(`Name: ${formData?.name}\nEmail: ${formData?.email}\nPhone: ${formData?.phone}\nInterested in $500 Education Credit.`);
       
-      window.open(`https://wa.me/${waNumber}?text=${message}`, '_blank');
+      // window.open(`https://wa.me/${waNumber}?text=${message}`, '_blank');
 
       setFormData({
         name: "",
