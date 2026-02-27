@@ -12,6 +12,7 @@ import t20 from "@/../public/t20.png";
 import t20_1 from "@/../public/t20-1.png";
 import t19 from "@/../public/t19.png";
 import t45 from "@/../public/t45.jpeg";
+import t50 from "@/../public/t50.jpeg";
 import { motion } from "framer-motion";
 import { TrendingUp, Users } from "lucide-react";
 
@@ -72,6 +73,21 @@ export const teamMembers = [
     qualifications: "Bachelor of commerce, Diploma in Hospitality Managment",
     experience: "Former Bank employee at Co operative bank",
   },
+   {
+      id: 4,
+      name: "Rahim",
+      type: "Mentors",
+      role: "Trading Mentor",
+      bio: "Senior mentor",
+      det: "Professional Stock & Forex Trader | SMC Specialist Active since 2019, specializing in Smart Money Concepts, market structure, liquidity engineering, and FVGs. Trades with a rule-based, risk-controlled approach. Mentors traders to execute professionally without signal dependency",
+      imageUrl: t50,
+      qualifications:
+        "NSE Certified, Forex Trading Masterclass, CISI Certified, AFCM Certified, CFA – Investments",
+      comfortableAreaInTrading: "Gold & Bitcoin",
+      experience: "7+ years into trading and personalized education",
+      achievements:
+        "Expert in volatile instruments, price psychology, and precise entry-exit strategies",
+    },
 
   // {
   //   id: 20,
